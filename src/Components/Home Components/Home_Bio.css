@@ -1,0 +1,21 @@
+.portfolio_bio_image_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+.portfolio_bio_writeup h1{
+font-family: 'SpaceGroteskMedium', sans-serif; 
+font-size: 3rem;
+}
+.portfolio_bio_writeup{
+    
+}
+.portfolio_bio_image_container img{
+height: 100%;
+object-fit: cover;
+width: 70%;
+filter: grayscale();
+
+}
+
