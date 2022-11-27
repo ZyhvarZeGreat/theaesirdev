@@ -1,0 +1,111 @@
+.portfolio_footer {
+    height: 100vh;
+    background-color: var(--footer-background-color);
+}
+
+.portfolio_footer_details {
+    border-bottom: .8px solid var(--footer-text-color);
+}
+
+.portfolio_footer_details_image {
+    margin-left: -3rem;
+    height: 30px;
+}
+
+
+.portfolio_footer_details_text h1 {
+    font-family: 'GilroyMedium';
+
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--footer-text-color);
+}
+
+.portfolio_footer_email_link {
+    font-family: 'GilroyMedium';
+    text-transform: capitalize;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.portfolio_footer_details_text_container {
+    width: 95%;
+}
+
+.portfolio_footer_details_social_media_links_container {
+
+    width: 60%;
+}
+
+.portfolio_footer_details_social_media_links {
+    text-align: start;
+}
+
+.portfolio_footer_details_social_media_links h1 {
+    font-family: 'GilroyMedium';
+    text-transform: capitalize;
+    font-size: 4rem;
+    color: var(--footer-text-color);
+}
+
+.portfolio_footer_details_social_media_links h1:hover {
+    transition: all .5s ease-in;
+    color: #fff;
+}
+
+
+.portfolio_footer_actions_container {
+    height: 90%;
+    width: 40rem;
+}
+
+.portfolio_footer_actions_form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.portfolio_footer_actions_text {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio_footer_actions_text h1 {
+    font-size: 3.5rem;
+    font-family: 'GilroySemiBold';
+    color: var(--footer-text-color);
+    text-transform: capitalize;
+}
+
+.portfolio_footer_actions_text p {
+    font-size: 1.1rem;
+    font-family: 'GilroyLight';
+    color: var(--footer-text-color);
+}
+
+.portfolio_footer_actions_form {}
+
+.portfolio_footer_actions_form input {
+    height: 4rem;
+    width: 22rem;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--footer-input-background-color);
+    font-family: 'GilroyRegular';
+}
+
+.portfolio_footer_actions_form button {
+    border-radius: 2rem;
+    height: 4rem;
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    font-family: 'GilroySemiBold';
+    cursor: pointer;
+}

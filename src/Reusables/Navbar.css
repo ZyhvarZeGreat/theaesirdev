@@ -1,0 +1,34 @@
+.portfolio_navbar{
+    background-color: transparent;
+}
+
+.portfolio_navbar_actions_links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.portfolio_navbar_details p{
+font-family: 'SpaceMonoRegular', sans-serif;
+letter-spacing: .7px;
+font-size: .9rem;
+font-weight: 300;
+text-transform: uppercase;
+}
+.portfolio_navbar_actions_links a {
+    font-size: .9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.portfolio_navbar_actions_button {
+height: 2.5rem;
+color: #fff;
+border-radius:20px;
+border: none;
+cursor: pointer;
+width: 8rem;
+font-size: 1rem;
+background-color: var(--footer-background-color);
+font-family: 'SpaceGroteskBold', sans-serif;
+}
