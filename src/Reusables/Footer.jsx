@@ -21,7 +21,7 @@ const Footer = () => {
       </Grid>
       <Grid xs={12} md={6} direction='column' alignItems='flex-end' justifyContent='center' container className='portfolio_footer_details_social_media_links'>
 <Stack width= {query ? '60%' : '90%' }alignItems={'flex-start'} className='portfolio_footer_details_social_media_links_container'>
-<a href=''> <h1>Github</h1></a>
+<a href='https://github.com/ZyhvarZeGreat'> <h1>Github</h1></a>
   <a href=''> <h1>LinkedIn</h1></a>
   <a href=''> <h1>Twitter</h1></a>
   <a href=''> <h1>Instagram</h1></a>
