@@ -1,18 +1,23 @@
+/* .portfolio_hero{
+    background-image: url(../../assets/810.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+} */
 .portfolio_hero_header_cta {
     color: var(--secondary-text-color);
-    font-size: 4rem;
+    font-size: clamp(2.5rem,5vw,4rem);
     font-family: 'GilroyMedium', serif;
 }
 
 .portfolio_hero_header h1 {
     font-family: 'GilroyMedium', 'sans-serif';
-    font-size: 4rem;
+    font-size: clamp(2.3rem,5vw,4rem);
 }
 
 .portfolio_hero_header{
-    background-color: aqua;
     display: flex;
-align-items: center;
+   align-items: center;
   
 }
 .portfolio_hero_header_notification {
@@ -20,7 +25,6 @@ align-items: center;
     display: flex;
     text-transform: uppercase;
     align-items: flex-end;
-background-color: antiquewhite;
     justify-content: flex-end;
 }
 .portfolio_hero_header_notification  h3{
@@ -29,4 +33,26 @@ font-family: 'SpaceGroteskBold';
 letter-spacing: 1px;
 color: var(--secondary-text-color);
 font-size: 1.3rem;
+}
+
+@media screen and (max-width: 900px){
+
+  
+    .portfolio_hero_header_notification {
+        height: 20rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px){
+    .portfolio_hero_header_notification {
+        height: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+
 }

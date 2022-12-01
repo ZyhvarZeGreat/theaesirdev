@@ -1,0 +1,57 @@
+.Home_Offers {
+    height: 90rem;
+}
+
+.Home_Offers_Items {
+    height: 30rem;
+    margin-left: 2rem;
+}
+
+.Home_Offers_Items_Text img {
+    height: 20px;
+}
+
+.Home_Offers_Container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 50%;
+
+}
+
+#red {
+    color: var(--secondary-text-color);
+}
+
+.Home_Offers_Items h3 {
+    font-size: clamp(2.3rem, 5vw, 3rem);
+    font-family: 'GilroyMedium'
+}
+
+.--Jobs :nth-child(4) {
+    color: var(--secondary-text-color);
+}
+
+.--Offers:nth-child(4) {
+    color: var(--secondary-text-color);
+}
+
+.Home_Offers_Container h1 {
+    color: var(--secondary-text-color);
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-family: 'GilroyMedium';
+    text-transform: capitalize;
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Home_Offers_Items {
+     margin: 0;
+    }
+    .Home_Offers_Container h1 {
+        margin: 0;
+
+    }
+}

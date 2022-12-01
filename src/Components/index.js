@@ -1,2 +1,7 @@
 export {default as Home_Hero} from './Home Components/Home_Hero'
 export {default as Home_Bio} from './Home Components/Home_Bio'
+export {default as Home_Offers} from './Home Components/Home_Offers'
+export {default as Home_Projects} from './Home Components/Home_Projects'
+export {default as Home_Work_Experience} from './Home Components/Home_Work_Experience'
+export {default as Home_Articles} from './Home Components/Home_Articles'
+export {default as Call_to_action} from './Home Components/Call_to_action'

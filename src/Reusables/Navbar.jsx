@@ -1,24 +1,26 @@
 import React from 'react'
 import './Navbar.css'
-import {Grid,Stack} from '@mui/material'
+import circle from "../assets/circle.svg";
+import {Grid,Stack,useTheme,useMediaQuery} from '@mui/material'
+
 import { Link } from 'react-router-dom'
 const Navbar = () => {
 
-  const styles ={
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap:'3rem',
-    justifyContent: 'center',
+  const theme = useTheme()
+  const query = useMediaQuery(theme.breakpoints.up('md'))
+  function mobileQuery(param1,param2){
+    query ? param1:param2
   }
+
   return (
-    <Grid container direction='row' height='4rem' backgroundColor='#e5e5e5' xs={11.5} alignItems='center' justifyContent='space-between' className='portfolio_navbar'>
-<Grid xs={4} style={styles}  item className='portfolio_navbar_details'>
-<p> Bolude Daniel <span>  .  </span></p>
-<p> Frontend Developer</p>
+    <Grid  container direction='row' height='6rem'    xs={12} md={11} alignItems='center' justifyContent='center' className='portfolio_navbar'>
+<Grid xs={12} sm={6}   direction='row'  alignItems={query ? 'center': 'flex-start'} justifyContent={query ? 'flex-start': 'center'}  container className='portfolio_navbar_details'>
+<Link className='portfolio_navbar_home_link' to = '/'>
+ Bolude Daniel <img src={circle}/>  Frontend Developer
+</Link>
 </Grid>
 
-<Grid xs={4} style={styles} item  className='portfolio_navbar_actions'>
+<Grid xs={12} sm={6}   direction='row' gap={query ? '4rem':'2rem'} alignItems='center'  justifyContent={query ? 'flex-end': 'center'}  container  className='portfolio_navbar_actions'>
 <div className='portfolio_navbar_actions_links'>
   <Link to ='/'>
     Work

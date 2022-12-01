@@ -1,0 +1,12 @@
+.Home_Work_Experience_header{
+    font-family: 'GilroyMedium';
+    margin-bottom: 2rem;
+    font-size: clamp(2rem,5vw,4rem);
+    text-transform: capitalize;
+    line-height: clamp(  3rem,5vw,4.7rem);
+
+}
+.Home_Work_Experience_header span{
+color: var(--secondary-text-color);
+
+}

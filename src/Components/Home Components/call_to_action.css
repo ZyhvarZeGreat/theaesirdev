@@ -1,0 +1,11 @@
+/* .call_to_action{
+
+} */
+.call_to_action h1{
+    font-size: clamp(2.5rem,5vw,4rem);
+    line-height: 1.4em;
+    font-family: 'GilroyRegular';
+}
+.call_to_action_span{
+color: #949494;
+}
