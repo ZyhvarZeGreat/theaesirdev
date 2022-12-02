@@ -27,7 +27,7 @@
 
 .Home_Offers_Items h3 {
     font-size: clamp(2.3rem, 5vw, 3rem);
-    font-family: 'SpaceGroteskMedium'
+    font-family: 'GilroyMedium'
 }
 
 .--Jobs :nth-child(4) {
