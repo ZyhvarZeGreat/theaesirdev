@@ -5,7 +5,7 @@ const Urcrypto = () => {
   return (
     <Grid
       container
-      xs={11.5}
+      xs={12}
       alignSelf="center"
       alignItems="center"
       justifyContent="center"

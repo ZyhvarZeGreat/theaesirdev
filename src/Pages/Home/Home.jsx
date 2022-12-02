@@ -1,7 +1,8 @@
-import React, {useRef} from "react";
-import { Grid } from "@mui/material";
+import React from "react";
+import { Grid, Stack,useTheme,useMediaQuery } from "@mui/material";
 import {Home_Hero,Home_Bio,Home_Offers,Home_Projects,Home_Work_Experience,Home_Articles,Call_to_action} from '../../Components/index'
 import { Navbar, Footer } from "../../Reusables/index";
+
 
 
 const projectsData = [
@@ -51,9 +52,12 @@ const projects = projectsData.map(({img,title,desc,tags,to})=> {
 })
 const Home = () => {
   
+
+ const theme = useTheme();
+ const query = useMediaQuery(theme.breakpoints.up('md'));
   return (
     <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={12}>
-      <Navbar />
+      <Navbar to={`/`}  />
       <Home_Hero/>
       <Home_Bio/>
       
@@ -63,7 +67,7 @@ const Home = () => {
         <h1 className="portfolio_projects_header"> Selected <span> Projects</span></h1>
 
         </Grid>
-  <Grid container alignItems='center' gap='7rem' className="portfolio_projects_contents">
+  <Grid container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_contents">
   {projects}
   </Grid>
         </Grid>

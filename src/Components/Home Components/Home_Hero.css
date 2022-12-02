@@ -52,7 +52,7 @@ font-size: 1.3rem;
     .portfolio_hero_header_notification {
         height: 10rem;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
 }

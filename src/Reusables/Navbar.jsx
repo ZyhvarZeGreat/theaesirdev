@@ -2,9 +2,9 @@ import React from 'react'
 import './Navbar.css'
 import circle from "../assets/circle.svg";
 import {Grid,Stack,useTheme,useMediaQuery} from '@mui/material'
-
-import { Link } from 'react-router-dom'
-const Navbar = () => {
+import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link } from 'react-router-dom'
+const Navbar = (props) => {
 
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.up('md'))
@@ -22,11 +22,11 @@ const Navbar = () => {
 
 <Grid xs={12} sm={6}   direction='row' gap={query ? '4rem':'2rem'} alignItems='center'  justifyContent={query ? 'flex-end': 'center'}  container  className='portfolio_navbar_actions'>
 <div className='portfolio_navbar_actions_links'>
-  <Link to ='/'>
+  <Link spy={true} smooth={true} duration={300} to ={props.to}>
     Work
   </Link>
 
-  <Link to ='/'>
+  <Link spy={true} smooth={true} duration={300} to ={props.to}>
     About
   </Link>
 </div>

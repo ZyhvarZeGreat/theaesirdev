@@ -3,13 +3,14 @@ flex-direction: row-reverse;
 }
 
 .portfolio_projects_content_text_top p {
-    font-size: 2.3rem;
+    font-size: clamp(1.3rem,5vw,1.8rem);
     font-family: 'GilroySemiBold';
     color: var(--secondary-text-color);
+    
 }
 
 .portfolio_projects_content_text_top h1 {
-    font-size: 2.6rem;
+    font-size: clamp(1.6rem,5vw,2.6rem);
     font-family: 'SpaceGroteskMedium';
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -18,6 +19,7 @@ flex-direction: row-reverse;
 
 .portfolio_projects_content_text_bottom p {
     font-family: 'GilroySemiBold';
+    font-size: clamp(.9rem,5vw,1.2rem);
 }
 
 .portfolio_projects_content_text_bottom_link {
@@ -28,7 +30,7 @@ flex-direction: row-reverse;
     font-family: 'GilroySemiBold';
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: clamp(1rem,5vw,1.1rem);
 
 }
 
@@ -49,4 +51,12 @@ flex-direction: row-reverse;
     width: 100%;
     border-radius: 30px;
     object-fit: cover;
+}
+
+@media screen and (max-width:900px) {
+
+    .portfolio_projects_content_image img {
+        border-radius: 0;
+    }
+
 }

@@ -12,7 +12,7 @@ const Footer = () => {
   return (
  
   <Grid container  alignItems='center' justifyContent='center' xs={12} className='portfolio_footer'>
-  <Grid  height='100%' item gap='2rem' xs={11.5} className='portfolio_footer_container'>
+  <Grid  height='100%' item gap='2rem' xs={12} md={11.5} className='portfolio_footer_container'>
   <Grid container alignItems='center' justifyContent='center'  className='portfolio_footer_details'  xs={12}>
       <Grid xs={12} md={6}container alignItems='center'justifyContent='flex-end' className='portfolio_footer_details_text'>
        <div className='portfolio_footer_details_text_container'>
