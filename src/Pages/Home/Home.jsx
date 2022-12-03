@@ -28,8 +28,8 @@ const projectsData = [
     to:'appointly'
   },
   {
-    img:'te',
-    title: 'techfaze.png',
+    img:'techfaze.png',
+    title: 'Techfaze',
     desc:'E-commerce Platform for high grade electronics and gadgets',
     tags:'Web App,E-commerce',
     to:'techfaze'
