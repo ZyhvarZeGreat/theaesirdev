@@ -1,9 +1,28 @@
-import React from "react";
+import React , {useRef,useEffect} from "react";
 import "./Home_Bio.css";
 import bio_image from "../../assets/main_bio.jpg";
+import {  gsap,TweenMax,TimelineLite,Power2 } from "gsap/gsap-core";
+import CssRulePlugin from "gsap/CSSRulePlugin";
 import { Grid,useTheme,useMediaQuery } from "@mui/material";
 
+ 
+
 const Home_Bio = () => {
+
+
+  let container = useRef(null)
+  let image = useRef(null)
+  let tl  = new TimelineLite()
+  gsap.registerPlugin(CssRulePlugin)
+  
+let imageReveal = CssRulePlugin.getRule('.portfolio_bio_image_container::after')
+  
+  useEffect(() => {
+    tl.to(container,2.5,{css:{ visibility:"visible"}}).to(imageReveal, 1.3,{width:'0%',ease:Power2.easeOut})
+    console.log(imageReveal)
+  })
+
+  
   
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.up('md'))
@@ -47,13 +66,13 @@ const Home_Bio = () => {
         </p>
       </Grid>
       <Grid
-        item
+       container
         className="portfolio_bio_image_container"
         xs={12}
         md={6}
-  
+        ref={el => container = el} 
       >
-        <img src={bio_image} alt="bio image" />
+        <img ref = {el => image = el } src={bio_image} alt="bio image" />
       </Grid>
     </Grid>
   );

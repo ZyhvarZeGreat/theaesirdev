@@ -1,9 +1,9 @@
-/* .portfolio_hero{
-    background-image: url(../../assets/810.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-} */
+.portfolio_hero{
+position: relative;
+}
+.spiral{
+position:absolute;
+}
 .portfolio_hero_header_cta {
     color: var(--secondary-text-color);
     font-size: clamp(2.5rem,5vw,4rem);
