@@ -1,13 +1,25 @@
-import React from "react";
+import React ,{useEffect,useRef} from  "react";
 import { Grid, Stack,useTheme,useMediaQuery } from "@mui/material";
 import "./Home_Projects.css";
+import {gsap} from 'gsap'
+import {Power3,ScrollTrigger} from 'gsap/src/all'
 import image from '../../assets/team-1.jpg'
 import { Link } from "react-router-dom";
-
 const Home_Projects = (props) => {
   const theme = useTheme();
   const query = useMediaQuery(theme.breakpoints.up('md'));
 
+gsap.registerPlugin(Power3)
+ let tl = gsap.timeline()
+let ref = useRef(null)
+  useEffect(() => {
+    console.log(ref)
+    tl.from('.portfolio_projects_container', {
+      y:200,
+      
+    })
+  })
+  
 
   return (
  <Grid xs={12} md={11} alignItems='center' justifyContent='center' container gap='3rem' className="portfolio_projects_container">

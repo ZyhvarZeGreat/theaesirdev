@@ -1,8 +1,11 @@
-.portfolio_hero{
-position: relative;
+.portfolio_header_items{
+    position: relative;
+    overflow: hidden;
+  
 }
-.spiral{
-position:absolute;
+
+.items{
+position: absolute;
 }
 .portfolio_hero_header_cta {
     color: var(--secondary-text-color);
@@ -12,9 +15,13 @@ position:absolute;
 
 .portfolio_hero_header h1 {
     font-family: 'GilroyMedium', 'sans-serif';
+    line-height: 4rem;
     font-size: clamp(2.3rem,5vw,4rem);
 }
-
+.portfolio_hero_header_container span{
+    font-family: 'GilroyMedium', 'sans-serif';
+    font-size: clamp(2.3rem,5vw,4rem);  
+}
 .portfolio_hero_header{
     display: flex;
    align-items: center;

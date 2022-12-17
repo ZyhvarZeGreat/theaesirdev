@@ -56,7 +56,8 @@ const Home = () => {
  const theme = useTheme();
  const query = useMediaQuery(theme.breakpoints.up('md'));
   return (
-    <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={12}>
+ <div>
+     <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={11.5}>
       <Navbar to={`/`}  />
       <Home_Hero/>
       <Home_Bio/>
@@ -79,8 +80,10 @@ const Home = () => {
       <Home_Work_Experience/>
       <Home_Articles/>
       <Call_to_action/>
-      <Footer />
+     
     </Grid>
+    <Footer />
+ </div>
   );
 };
 
