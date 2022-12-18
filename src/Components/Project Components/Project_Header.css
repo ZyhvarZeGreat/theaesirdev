@@ -1,6 +1,6 @@
 .portolio_project_header {
 
-    min-height: 30rem;
+    height: 30rem;
 }
 
 .portolio_project_header_text {
@@ -8,19 +8,19 @@
 }
 
 .portolio_project_header_text p {
-    font-family: 'SpaceGroteskMedium', sans-serif;
+    font-family: 'GilroyMedium', sans-serif;
     font-size: 1.6rem;
     text-align: start;
     color: var(--secondary-text-color);
 }
 
 .portolio_project_header_text h1 {
-    font-family: 'GilroyMedium';
+    font-family: 'SpaceGroteskMedium';
     font-size: 5rem;
 }
 
 .portolio_project_header_description p {
-    font-size: clamp(1.4rem,5vw,1.8rem);
+    font-size: clamp(1.4rem,5vw,1.6rem);
     font-family: 'GilroyRegular', sans-serif;
     line-height: 1.8em;
 }

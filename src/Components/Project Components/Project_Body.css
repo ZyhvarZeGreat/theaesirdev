@@ -1,0 +1,46 @@
+.Projects_Image{
+    background-image: url(../../assets/urcrypto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 1px 1px 0.8px rgba(0,0,0,0.05);
+}
+
+.Projects_Image_2{
+    background-image: url(../../assets/Dashboard.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.06);
+}
+
+.Projects_Image_3{
+    background-image: url(../../assets/SignUp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    filter:drop-shadow(0 0 0.75rem rgba(0,0,0,0.4) )
+}
+.Projects_Image_Text p{
+    font-family: 'GilroyRegular';
+    font-size: 1.3rem;
+    line-height: 1.5em;
+}
+
+.Projects_Image_Text h2{
+font-size: 2rem;
+font-family: 'SpaceGroteskMedium';
+color: var(--secondary-text-color);
+}
+
+.Projects_Image_Text_Challenge h2{
+    font-size: 2rem;
+    font-family: 'SpaceGroteskMedium';
+    color: var(--secondary-text-color);
+}
+
+.Projects_Image_Text_Challenge p{
+    font-size: 1.3rem;
+        line-height: 1.5em;
+    font-family: 'GilroyRegular';
+}

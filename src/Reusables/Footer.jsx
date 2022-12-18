@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import { Link } from "react-router-dom";
 import message from '../assets/message.svg'
+import {gsap,Power3,ScrollTrigger} from 'gsap/all'
 import "./Footer.css";
 import { Grid ,Stack,useTheme,useMediaQuery} from "@mui/material";
 const Footer = () => {
@@ -9,9 +10,24 @@ const Footer = () => {
   function mobileQuery(param1,param2){
     query ? param1:param2
   }
+  gsap.registerPlugin(Power3,ScrollTrigger)
+  const tl = gsap.timeline()
+
+ 
   return (
  
-  <Grid container  alignItems='center' justifyContent='center' xs={12} className='portfolio_footer'>
+    useEffect(() => {
+    tl.from(".portfolio_footer_details_image",{
+      opacity:0,
+      duration:9,
+      display:'none',
+      SkewY:4    
+    })
+
+    
+    }),
+ 
+  <Grid container alignItems='center' justifyContent='center' xs={12} className='portfolio_footer'>
   <Grid  height='100%' item gap='2rem' xs={12} md={11.5} className='portfolio_footer_container'>
   <Grid container alignItems='center' justifyContent='center'  className='portfolio_footer_details'  xs={12}>
       <Grid xs={12} md={6}container alignItems='center'justifyContent='flex-end' className='portfolio_footer_details_text'>

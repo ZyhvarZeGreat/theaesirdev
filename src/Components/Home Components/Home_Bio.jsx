@@ -26,7 +26,6 @@ let imageReveal = CssRulePlugin.getRule('.portfolio_bio_image_container::after')
           trigger:'portfolio_bio',
           start:'top center',
           end:'+=300',
-          markers:{startColor:'red',endColor:'green',fontSize:'19px',fontWeight:'bold'}
         },
         y:-300,
         skewY:-2,

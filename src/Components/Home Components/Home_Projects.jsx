@@ -16,14 +16,13 @@ let ref = useRef(null)
     console.log(ref)
     tl.from('.portfolio_projects_container', {
       y:200,
-      
     })
   })
   
 
   return (
  <Grid xs={12} md={11} alignItems='center' justifyContent='center' container gap='3rem' className="portfolio_projects_container">
-
+ 
  <Grid xs={12} container direction='row' alignItems='center' gap={query ? '4rem':  '0rem'} justifyContent='center'   height={query ? '40rem' :'60rem'} className="portfolio_projects_content">
 
 

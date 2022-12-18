@@ -63,12 +63,12 @@ const Home = () => {
       <Home_Bio/>
       
 
-        <Grid gap='5rem'  xs={11}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
-        <Grid container xs={11}  height='6rem' alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
+        <Grid gap='1rem'  xs={11}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
+        <Grid container xs={11}  height='6rem' backgroundColor='blue' alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
         <h1 className="portfolio_projects_header"> Selected <span> Projects</span></h1>
 
         </Grid>
-  <Grid container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_contents">
+  <Grid  container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_contents">
   {projects}
   </Grid>
         </Grid>
