@@ -1,49 +1,12 @@
-import React from "react";
-import { Grid, Stack,useTheme,useMediaQuery } from "@mui/material";
+import React,{useEffect,useRef} from "react";
+import { Grid, Stack,useTheme,useMediaQuery, getBottomNavigationActionUtilityClass } from "@mui/material";
 import {Home_Hero,Home_Bio,Home_Offers,Home_Projects,Home_Work_Experience,Home_Articles,Call_to_action} from '../../Components/index'
 import { Navbar, Footer } from "../../Reusables/index";
+import {gsap} from 'gsap'
+import {Power3,ScrollTrigger} from 'gsap/src/all'
+import {projectsData }from './Projects_Data'
 
 
-
-const projectsData = [
-  {
-    img:'urcrypto.jpg',
-    title: 'Urcrypto',
-    desc:' A Landing page and dashboard geared towards crypto transactions',
-    tags:'Web App,Finance',
-    to:'urcrypto'
-  },
-  {
-    img:'lalasia.png',
-    title: 'Lalasia',
-    desc:' An e-commerce/landing page for high end furniture purchase',
-    tags:'Web App,E-commerce',
-    to:'lalasia'
-  },
-  {
-    img:'Appointfly.png',
-    title: 'Appointfly',
-    desc:' A Task Management App',
-    tags:'Web App,Task Management',
-    to:'appointly'
-  },
-  {
-    img:'techfaze.png',
-    title: 'Techfaze',
-    desc:'E-commerce Platform for high grade electronics and gadgets',
-    tags:'Web App,E-commerce',
-    to:'techfaze'
-  },
-
-  {
-    img:'estatery.png',
-    title: 'Estatery',
-    desc:'A Realtor Platform to buy ,sell and rent real estate',
-    tags:'Web App,E-commerce',
-    to:'estatery',
-  },
-  
-]
 
 const projects = projectsData.map(({img,title,desc,tags,to})=> {
   return (
@@ -51,24 +14,61 @@ const projects = projectsData.map(({img,title,desc,tags,to})=> {
   )
 })
 const Home = () => {
-  
 
- const theme = useTheme();
- const query = useMediaQuery(theme.breakpoints.up('md'));
+const theme = useTheme();
+const query = useMediaQuery(theme.breakpoints.up('md'));
+const ref = useRef(getBottomNavigationActionUtilityClass)
+gsap.registerPlugin(Power3,ScrollTrigger)
+let tl = gsap.timeline()
+
+
+
+ useEffect(() => {
+  // tl.from( ref,
+  //   {
+  //   y:300,
+  //   skewY:1.1,
+  //   opacity:0,
+  //   ease:Power3.easeOut,
+  //   duration:3,
+  //   scrub:true,
+  //   stagger:{
+  //       amount:.6
+  //   },
+
+  // })
+
+  let element = ref.current
+  tl.from(element.querySelector(".portfolio_projects_container"),{
+      y:200,
+      opacity:0,
+      duration:1,
+      ease:'elastic',
+      delay:.3,    
+
+    scrollTrigger:{
+      trigger:(element.querySelector(".portfolio_projects_contents")),
+      start:'top top',
+      end:'+=500',
+      markers:{startColor:'red', endColor:'blue',fontSize:20,fontWeight:'bold'}
+    }
+  })
+})
+
   return (
- <div>
-     <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={11.5}>
+ <Grid  container alignItems='center'justifyContent='center' xs={12}>
+     <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={11}>
       <Navbar to={`/`}  />
       <Home_Hero/>
       <Home_Bio/>
       
 
         <Grid gap='1rem'  xs={11}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
-        <Grid container xs={11}  height='6rem' backgroundColor='blue' alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
+        <Grid container xs={11}  height='6rem'alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
         <h1 className="portfolio_projects_header"> Selected <span> Projects</span></h1>
 
         </Grid>
-  <Grid  container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_contents">
+  <Grid ref={ref}   container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_content">
   {projects}
   </Grid>
         </Grid>
@@ -83,7 +83,7 @@ const Home = () => {
      
     </Grid>
     <Footer />
- </div>
+ </Grid>
   );
 };
 

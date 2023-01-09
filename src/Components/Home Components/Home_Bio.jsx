@@ -36,7 +36,7 @@ let imageReveal = CssRulePlugin.getRule('.portfolio_bio_image_container::after')
         y:300,
         skewY:2,
         opacity:0,
-        ease:Power2.easeOut,
+        ease:'Power1.easeOut',
         duration:1,
         stagger:{
           amount:0.7

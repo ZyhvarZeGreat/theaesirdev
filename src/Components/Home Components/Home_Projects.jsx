@@ -9,24 +9,13 @@ const Home_Projects = (props) => {
   const theme = useTheme();
   const query = useMediaQuery(theme.breakpoints.up('md'));
 
-gsap.registerPlugin(Power3)
- let tl = gsap.timeline()
-let ref = useRef(null)
-  useEffect(() => {
-    console.log(ref)
-    tl.from('.portfolio_projects_container', {
-      y:200,
-    })
-  })
-  
-
   return (
- <Grid xs={12} md={11} alignItems='center' justifyContent='center' container gap='3rem' className="portfolio_projects_container">
+ <Grid   xs={12} md={11} alignItems='center' justifyContent='center' container gap='3rem' className="portfolio_projects_container">
  
  <Grid xs={12} container direction='row' alignItems='center' gap={query ? '4rem':  '0rem'} justifyContent='center'   height={query ? '40rem' :'60rem'} className="portfolio_projects_content">
 
 
- <Grid   height={query ? '100%':'40%'}  container alignItems='center' justifyContent='center'  xs={12} md={6} className="portfolio_projects_content_image">
+ <Grid height={query ? '100%':'40%'}  container alignItems='center' justifyContent='center'  xs={12} md={6} className="portfolio_projects_content_image">
 <img src={`../${props.img}`} alt={`${props.img}`}/>
   </Grid>
 

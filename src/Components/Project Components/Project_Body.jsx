@@ -1,13 +1,17 @@
 import React, { useRef, useEffect } from "react";
 import "./Project_Body.css";
+import { Link,useNavigate,redirect } from "react-router-dom";
 import { Grid, Stack, useTheme, useMediaQuery } from "@mui/material";
 
 import { gsap, ScrollTrigger, Power2 } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, Power2);
 
-const Project_Body = () => {
-  function textAnimate(el) {
+
+
+const Project_Body = (props) => {
+  
+  function textAnimate([el]) {
     tl.fromTo(el, {
       y: 100,
       opacity: 0,
@@ -15,6 +19,9 @@ const Project_Body = () => {
       skewY: -1,
       ease: Power2.easeInOut,
       delay: 0.3,
+      scrollTrigger:{
+        trigger: el
+      }
     });
   }
   const tl = gsap.timeline();
@@ -26,8 +33,24 @@ const Project_Body = () => {
   let header1 = useRef(null);
   let header2 = useRef(null);
   let header3 = useRef(null);
+
+  const navigate = useNavigate()
+
+  const navigateFunction =() => {
+redirect(`/${props.to}`)
+console.log(props.to)
+  }
   useEffect(() => {
-    tl.from(
+    
+  console.log(navigateFunction)
+  tl.from([header1, header2, header3], {
+    x: -200,
+    opacity: 0,
+    duration: 1,
+    skewX: -1,
+    ease: Power2.easeInOut,
+    delay: 0.3,
+  },0.45).from(
       [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5],
 
       {
@@ -37,17 +60,13 @@ const Project_Body = () => {
         skewY: -1,
         ease: Power2.easeInOut,
         delay: 0.3,
+        scrollTrigger:{
+          trigger:'.Projects_Image_Text'
+        }
       },
       "+=1"
     );
-    tl.from([header1, header2, header3], {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      skewX: -1,
-      ease: Power2.easeInOut,
-      delay: 0.3,
-    });
+   
   });
   return (
     <Grid
@@ -55,13 +74,14 @@ const Project_Body = () => {
       xs={11}
       alignItems="center"
       justifyContent="center"
-      gap="5rem"
+      gap="3rem"
       height="30rem"
     >
       <Grid
         borderRadius="1rem"
         height="40rem"
         className="Projects_Image"
+        style={{backgroundImage: `url('../${props.Project_Image_1}')`}}
         container
         xs={11}
       ></Grid>
@@ -76,88 +96,77 @@ const Project_Body = () => {
         xs={12}
         md={11}
       >
-        <Stack gap="1rem" width="70%">
+        <Stack  gap="1rem" width="70%">
           <p ref={(el) => (paragraph1 = el)}>
-            beGalileo is a mathematical thinking program for children aged 3-14
-            years.The program helps build confidence, improve problem-solving,
-            enhances brain function, and boosts critical thinking.
+      {props.introHeading1}
           </p>
-
           <p ref={(el) => (paragraph2 = el)}>
-            It also helps parents get a comprehensive insight into a child's
-            learning journey through online and on-demand reports.
+          {props.introHeading2}
           </p>
         </Stack>
 
-        <Stack width="70%" gap="1rem">
-          <h2 ref={(el) => (header1 = el)}> Role </h2>
+        <Stack  width="70%" gap="1rem">
+          <h2 ref={(el) => (header1 = el)}> {props.heading1} </h2>
           <p ref={(el) => (paragraph3 = el)}>
-            My responsibilities included defining scope, managing project, user
-            research, ideating concepts, wireframing, iterating on feedback,
-            designing system, creating prototypes, coordinating with developers
+          {props.paragraph1}
           </p>
         </Stack>
 
-        <Stack width="70%" gap="1rem">
-          <h2 ref={(el) => (header2 = el)}>Methods</h2>
+        <Stack  width="70%" gap="1rem">
+          <h2 ref={(el) => (header2 = el)}>{props.heading2} </h2>
           <p ref={(el) => (paragraph4 = el)}>
-            Used Competitive & Comparative Analysis, Business Analysis, User
-            Persona, User Flow, Site Map, System Design, Information
-            Architecture, UI/UX Design, Prototyping, and Iterating, Usability
-            Testing.
+          {props.paragraph2}
           </p>
         </Stack>
 
-        <Stack width="70%" gap="1rem">
-          <h2 ref={(el) => (header3 = el)}> Tools </h2>
+        <Stack   width="70%" gap="1rem">
+          <h2 ref={(el) => (header3 = el)}> {props.heading3}</h2>
 
           <p ref={(el) => (paragraph5 = el)}>
-            {" "}
-            ReactJS, Material UI, GSAP, Vercel
+            {props.paragraph3}
           </p>
         </Stack>
       </Grid>
       <Grid
         borderRadius="1rem"
-        height="40rem"
+        height="50rem"
         className="Projects_Image_2"
+        style={{backgroundImage: `url('../${props.Project_Image_2}')`}}
         container
         xs={11}
       ></Grid>
       <Grid
         xs={11}
         alignSelf="center"
-        height="30rem"
+        height="25rem"
         alignItems="center"
         justifyContent="center"
         container
+        
         className="Projects_Image_Text_Challenge"
       >
-        <Stack width="70%" gap="1rem">
-          <h2> Challenge </h2>
+        <Stack width="70%" gap=".8rem">
+          <h2>   {props.heading4} </h2>
           <p>
-            My responsibilities included defining scope, managing project, user
-            research, ideating concepts, wireframing, iterating on feedback,
-            designing system, creating prototypes, coordinating with developers
+          {props.paragraph4}
           </p>
         </Stack>
 
-        <Stack width="70%" gap="1rem">
-          <h2> Solution</h2>
+        <Stack width="70%" gap=".8rem">
+        <h2>   {props.heading5} </h2>
           <p>
-            My responsibilities included defining scope, managing project, user
-            research, ideating concepts, wireframing, iterating on feedback,
-            designing system, creating prototypes, coordinating with developers
+          {props.paragraph5}
           </p>
         </Stack>
       </Grid>
 
       <Grid
         borderRadius="1rem"
-        height="40rem"
+        height="50rem"
         className="Projects_Image_3"
         container
         xs={11}
+        style={{backgroundImage: `url('../${props.Project_Image_3}')`}}
       ></Grid>
 
       <Grid
@@ -170,17 +179,18 @@ const Project_Body = () => {
         className="Projects_Image_Text_Challenge"
       >
         <Stack width="70%" gap="1rem">
-          <h2> Easy Onboarding Process</h2>
+        <h2>{props.heading6} </h2>
           <p>
-            Based on our research on persona and discussion with the client, we
-            knew the target groups we are catering to are young parents who are
-            working professionals and want their children to get the best
-            education. That leads us to keep the signup and adding a child
-            process simple and fast so that they can get started quickly.
+          {props.paragraph6}
           </p>
         </Stack>
 
-
+        <Stack height='10rem'  gap='2rem' className="Project_Body_Navigation" width="70%" alignItems="center" justifyContent="center">
+          <p>Next</p>
+       <button onClick={()=> navigateFunction()} >
+       <h1>{props.nextPageLink}</h1>
+       </button>
+        </Stack>
       </Grid>
     </Grid>
   );

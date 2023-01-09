@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect,useRef} from "react";
 import circle from "../../assets/circle.svg";
 import redcircle from "../../assets/red-circle.svg"
+import fadeIn from '../../Animations/fadein'
 import { Grid, Stack } from "@mui/material";
 import "./Home_Offers.css";
 const Home_Offers = () => {
  
+
+  useEffect(() => {
+  fadeIn('.Home_Offers_Items_Text','.Home_Offers_Items_Text h3')
+  })
+  
   return (
     <Grid
       container

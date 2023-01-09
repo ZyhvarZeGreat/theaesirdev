@@ -16,17 +16,17 @@ const Project_Header = (props) => {
   })
   return (
 
-    <Grid  xs={11}container alignItems='center' justifyContent='space-between' className='portolio_project_header'>
+    <Grid xs={11}container alignItems='center' justifyContent='center' className='portolio_project_header'>
 
-<Grid xs={12} height='20rem' backgroundColor='azure' container direction='column'  alignItems='center' gap='2rem' justifyContent='center' className='portolio_project_header_text'>
-<h1 ref={el => headerEl = el}>Urcrypto</h1>
-<p> A Landing page and dashboard geared towards crypto transactions</p>
+<Grid xs={12} height='20rem'  container direction='column'  alignItems='center' gap='1rem' justifyContent='center' className='portolio_project_header_text'>
+<h1 ref={el => headerEl = el}>{props.title}</h1>
+<p>{props.subtitle}</p>
 </Grid>
 
-<Grid xs={12} height='20rem' container alignItems='center' justifyContent='flex-start' className='portolio_project_header_description'>
-<Grid height='12rem' backgroundColor='blue' container xs={12}>
-<p> Urcrypto was my first project , and i intended it to be  an exploration of a centralized exchange <br/> 
- the end goal of the project was to enable users to make transactions seamlessly hitch and hassle free
+<Grid xs={12} height='10rem'  container alignItems='flex-start' justifyContent='center' className='portolio_project_header_description'>
+<Grid  textAlign='center' alignItems='center' justifyContent='center'  container xs={10}>
+<p>
+  {props.desc}
 </p>
 
 </Grid>
