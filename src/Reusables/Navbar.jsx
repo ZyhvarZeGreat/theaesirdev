@@ -14,7 +14,7 @@ const Navbar = (props) => {
   }
 
   return (
-    <Grid  container direction='row' height='6rem'    xs={12} md={11} alignItems='center' justifyContent='center' className='portfolio_navbar'>
+    <Grid marginTop='2rem'   container direction='row' height='6rem'    xs={12} md={11} alignItems='center' justifyContent='center' className='portfolio_navbar'>
 <Grid xs={12} sm={6}   direction='row'  alignItems={query ? 'center': 'flex-start'} justifyContent={query ? 'flex-start': 'center'}  container className='portfolio_navbar_details'>
 <NavLink className='portfolio_navbar_home_link' to = '/'>
  Bolude Daniel <img src={circle}/>  Frontend Developer

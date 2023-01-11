@@ -61,3 +61,9 @@ font-size: 2rem;
         width: 100%;
         background-color: aqua;
     }
+
+    .portfolio_project_navigate_btn{
+        background-color:transparent;
+        border: none;
+        margin-bottom: 3rem;
+    }

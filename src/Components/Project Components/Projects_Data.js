@@ -1,6 +1,9 @@
 export const Projects_Data = [
    { 
       id:"1",
+      Title:'Urcrypto',
+      subTitle:'Urcrypto is a comprehensive crypto-wallet and trading application that allows you to securely buy, sell, store, and track your digital assets.',
+      desc:'',
       Project_Image_1: 'urcrypto.jpg' ,
       Project_Image_2: 'Dashboard.jpg' ,
       Project_Image_3: 'SignIn.png' ,
@@ -32,6 +35,9 @@ export const Projects_Data = [
     },
     {    
       id:"2",
+      Title:'Lalasia',
+      subTitle:'An e-commerce/landing page for high end furniture purchase',
+      desc:"Find your perfect furniture with Lalasi! Browse a wide selection of high-quality furniture and home decor in one convenient app. ",
       Project_Image_1: 'lalasia.png',
       Project_Image_2: 'Details.png',
       Project_Image_3: 'Services.png',
@@ -63,6 +69,9 @@ export const Projects_Data = [
     },
     { 
       id:"3",
+      Title:'Morent',
+      subTitle:'A Car Rental Servicing Application',
+      desc:"Morent is the perfect car rental app for all your travel needs. With a wide selection of cars to choose from, competitive prices, and the ability to book and pay through the app, Morent makes car rental a breeze.",
       Project_Image_1: 'morent.png',
       Project_Image_2: 'Admin_Dashboard.png',
       Project_Image_3: 'Car_Details.png',
@@ -94,6 +103,9 @@ export const Projects_Data = [
     },
     {
       id:"4",
+      Title:'Techfaze',
+      subTitle:'E-commerce Platform for high grade electronics and gadgets',
+      desc:"Techfaze is your one-stop shop for all the latest and greatest electronics and gadgets. Our vast selection of products, from smartphones and laptops to smart home devices and gaming consoles, is sure to have something for everyone.", 
       Project_Image_1: 'morent.png',
       Project_Image_2: 'Admin_Dashboard.png',
       Project_Image_3: 'Car_Details.png',
@@ -125,6 +137,9 @@ export const Projects_Data = [
     },
     { 
       id:"5",
+      Title:'Nuegas',
+      desc:'Stay organized and productive with Nuegas, the ultimate task management app. Easily create and manage to-do lists, set reminders, and track your progress.',
+      subTitle:'A Task Management SAAS',
       Project_Image_1: "NuegasCover.png",
       Project_Image_2: "NuegasDashboard.png",
       Project_Image_3: "NuegasDetails.png",

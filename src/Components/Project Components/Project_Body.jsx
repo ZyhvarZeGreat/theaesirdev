@@ -160,7 +160,7 @@ const Project_Body = (props) => {
       </Grid>
       <Grid
         borderRadius="1rem"
-        height={query ? "50rem" : "15rem"}
+        height={query ? "50rem" : "20rem"}
         className="Projects_Image_2"
         style={{ backgroundImage: `url('../${Project_Image_2}')` }}
         container
@@ -189,7 +189,7 @@ const Project_Body = (props) => {
 
       <Grid
         borderRadius="1rem"
-        height={query ? "50rem" : "15rem"}
+        height={query ? "50rem" : "20rem"}
         className="Projects_Image_3"
         container
         md={11}
@@ -221,7 +221,7 @@ const Project_Body = (props) => {
         >
           <p>Next</p>
        
-         <button onClick={()=>navigateTo(`/${(Number(id) + 1).toString()}`)}>
+         <button className='portfolio_project_navigate_btn' onClick={()=>navigateTo(`/${(Number(id) + 1).toString()}`)}>
          <h1>{nextPageLink}</h1>
          </button>
          
