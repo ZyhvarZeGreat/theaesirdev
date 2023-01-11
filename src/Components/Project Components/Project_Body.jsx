@@ -1,16 +1,51 @@
 import React, { useRef, useEffect } from "react";
 import "./Project_Body.css";
-import { Link,useNavigate,redirect } from "react-router-dom";
+import { Link, useNavigate, redirect, useParams } from "react-router-dom";
 import { Grid, Stack, useTheme, useMediaQuery } from "@mui/material";
-
+import { Projects_Data } from "./Projects_Data";
 import { gsap, ScrollTrigger, Power2 } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, Power2);
 
-
-
 const Project_Body = (props) => {
-  
+  const { projectdetails } = useParams();
+
+  const navigateTo = useNavigate()
+
+  const projects = Projects_Data.find(
+    (product) => product.id === projectdetails
+  );
+
+  console.log(projects)
+
+  const {
+    Project_Image_1,
+    Project_Image_2,
+    Project_Image_3,
+    introHeading1,
+    id,
+    introsubHeading,
+    paragraph1text,
+    paragraph2text,
+    paragraph3text,
+    paragraph4text,
+    paragraph5text,
+    paragraph6text,
+    heading1,
+    heading2,
+    heading3,
+    heading4,
+    heading5,
+    heading6,
+    to,
+    nextPageLink
+
+  } = projects;
+
+  console.log((Number(id) + 1).toString())
+  const theme = useTheme();
+  const query = useMediaQuery(theme.breakpoints.up("md"));
+
   function textAnimate([el]) {
     tl.fromTo(el, {
       y: 100,
@@ -19,9 +54,9 @@ const Project_Body = (props) => {
       skewY: -1,
       ease: Power2.easeInOut,
       delay: 0.3,
-      scrollTrigger:{
-        trigger: el
-      }
+      scrollTrigger: {
+        trigger: el,
+      },
     });
   }
   const tl = gsap.timeline();
@@ -34,23 +69,26 @@ const Project_Body = (props) => {
   let header2 = useRef(null);
   let header3 = useRef(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const navigateFunction =() => {
-redirect(`/${props.to}`)
-console.log(props.to)
-  }
+  const navigateFunction = () => {
+    navigate(`${(Number(id) + 1).toString()}`);
+    console.log(to);
+  };
   useEffect(() => {
-    
-  console.log(navigateFunction)
-  tl.from([header1, header2, header3], {
-    x: -200,
-    opacity: 0,
-    duration: 1,
-    skewX: -1,
-    ease: Power2.easeInOut,
-    delay: 0.3,
-  },0.45).from(
+    console.log(navigateFunction);
+    tl.from(
+      [header1, header2, header3],
+      {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        skewX: -1,
+        ease: Power2.easeInOut,
+        delay: 0.3,
+      },
+      0.45
+    ).from(
       [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5],
 
       {
@@ -60,13 +98,12 @@ console.log(props.to)
         skewY: -1,
         ease: Power2.easeInOut,
         delay: 0.3,
-        scrollTrigger:{
-          trigger:'.Projects_Image_Text'
-        }
+        scrollTrigger: {
+          trigger: ".Projects_Image_Text",
+        },
       },
       "+=1"
     );
-   
   });
   return (
     <Grid
@@ -79,11 +116,12 @@ console.log(props.to)
     >
       <Grid
         borderRadius="1rem"
-        height="40rem"
+        height={query ? "50rem" : "20rem"}
         className="Projects_Image"
-        style={{backgroundImage: `url('../${props.Project_Image_1}')`}}
+        style={{ backgroundImage: `url('../${Project_Image_1}')` }}
         container
-        xs={11}
+        md={11}
+        xs={11.8}
       ></Grid>
 
       <Grid
@@ -96,44 +134,39 @@ console.log(props.to)
         xs={12}
         md={11}
       >
-        <Stack  gap="1rem" width="70%">
-          <p ref={(el) => (paragraph1 = el)}>
-      {props.introHeading1}
-          </p>
-          <p ref={(el) => (paragraph2 = el)}>
-          {props.introHeading2}
-          </p>
+        <Stack
+          className="portfolio_projects_header"
+          gap="1rem"
+          width={query ? "70%" : "100%"}
+        >
+          <p ref={(el) => (paragraph1 = el)}>{introHeading1}</p>
+          <p ref={(el) => (paragraph2 = el)}>{introsubHeading}</p>
         </Stack>
 
-        <Stack  width="70%" gap="1rem">
-          <h2 ref={(el) => (header1 = el)}> {props.heading1} </h2>
-          <p ref={(el) => (paragraph3 = el)}>
-          {props.paragraph1}
-          </p>
+        <Stack width={query ? "70%" : "100%"} gap="1rem">
+          <h2 ref={(el) => (header1 = el)}> {heading1} </h2>
+          <p ref={(el) => (paragraph3 = el)}>{paragraph1text}</p>
         </Stack>
 
-        <Stack  width="70%" gap="1rem">
-          <h2 ref={(el) => (header2 = el)}>{props.heading2} </h2>
-          <p ref={(el) => (paragraph4 = el)}>
-          {props.paragraph2}
-          </p>
+        <Stack width={query ? "70%" : "100%"} gap="1rem">
+          <h2 ref={(el) => (header2 = el)}>{heading2} </h2>
+          <p ref={(el) => (paragraph4 = el)}>{paragraph2text}</p>
         </Stack>
 
-        <Stack   width="70%" gap="1rem">
-          <h2 ref={(el) => (header3 = el)}> {props.heading3}</h2>
+        <Stack width={query ? "70%" : "100%"} gap="1rem">
+          <h2 ref={(el) => (header3 = el)}> {heading3}</h2>
 
-          <p ref={(el) => (paragraph5 = el)}>
-            {props.paragraph3}
-          </p>
+          <p ref={(el) => (paragraph5 = el)}>{paragraph3text}</p>
         </Stack>
       </Grid>
       <Grid
         borderRadius="1rem"
-        height="50rem"
+        height={query ? "50rem" : "15rem"}
         className="Projects_Image_2"
-        style={{backgroundImage: `url('../${props.Project_Image_2}')`}}
+        style={{ backgroundImage: `url('../${Project_Image_2}')` }}
         container
-        xs={11}
+        md={11}
+        xs={11.8}
       ></Grid>
       <Grid
         xs={11}
@@ -142,31 +175,27 @@ console.log(props.to)
         alignItems="center"
         justifyContent="center"
         container
-        
         className="Projects_Image_Text_Challenge"
       >
-        <Stack width="70%" gap=".8rem">
-          <h2>   {props.heading4} </h2>
-          <p>
-          {props.paragraph4}
-          </p>
+        <Stack width={query ? "70%" : "100%"} gap=".8rem">
+          <h2> {heading4} </h2>
+          <p>{paragraph4text}</p>
         </Stack>
 
-        <Stack width="70%" gap=".8rem">
-        <h2>   {props.heading5} </h2>
-          <p>
-          {props.paragraph5}
-          </p>
+        <Stack width={query ? "70%" : "100%"} gap=".8rem">
+          <h2> {heading5} </h2>
+          <p>{paragraph5text}</p>
         </Stack>
       </Grid>
 
       <Grid
         borderRadius="1rem"
-        height="50rem"
+        height={query ? "50rem" : "15rem"}
         className="Projects_Image_3"
         container
-        xs={11}
-        style={{backgroundImage: `url('../${props.Project_Image_3}')`}}
+        md={11}
+        xs={11.8}
+        style={{ backgroundImage: `url('../${Project_Image_3}')` }}
       ></Grid>
 
       <Grid
@@ -178,18 +207,26 @@ console.log(props.to)
         container
         className="Projects_Image_Text_Challenge"
       >
-        <Stack width="70%" gap="1rem">
-        <h2>{props.heading6} </h2>
-          <p>
-          {props.paragraph6}
-          </p>
+        <Stack width={query ? "70%" : "100%"} gap="1rem">
+          <h2>{heading6} </h2>
+          <p>{paragraph6text}</p>
         </Stack>
 
-        <Stack height='10rem'  gap='2rem' className="Project_Body_Navigation" width="70%" alignItems="center" justifyContent="center">
+        <Stack
+          height="10rem"
+          gap="2rem"
+          className="Project_Body_Navigation"
+          width={query ? "70%" : "100%"}
+          alignItems="center"
+          justifyContent="center"
+        >
           <p>Next</p>
-       <button onClick={()=> navigateFunction()} >
-       <h1>{props.nextPageLink}</h1>
-       </button>
+       
+         <button onClick={()=> navigat}>
+         <h1>{nextPageLink}</h1>
+         </button>
+         
+        
         </Stack>
       </Grid>
     </Grid>
