@@ -9,11 +9,9 @@ function App() {
  <div className="App">
 <Routes>
 <Route  path='/' element ={<Home/>}/>
-<Route  path='lalasia' element={<Lalasia/>}/>
-<Route  path='urcrypto' element={<Urcrypto/>}/>
-<Route  path='nuegas' element={<Nuegas/>}/>
-<Route  path='techfaze' element={<Techfaze/>}/>
-<Route  path='morent' element={<Morent/>}/>
+<Route path = ':projectdetails' element={<Projects/>}/>
+{/* 
+ */}
 </Routes>
     </div>
   

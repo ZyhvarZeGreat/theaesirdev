@@ -67,25 +67,7 @@ const Urcrypto = () => {
         </Stack>
         <Project_Header title={header.title} subtitle={header.subtitle} desc={header.desc} />
         <Project_Body
-        Project_Image_1={Content.Project_Image_1}
-        Project_Image_2={Content.Project_Image_2}
-        Project_Image_3={Content.Project_Image_3}
-        introHeading1={Content.introHeading1}
-        introHeading2={Content.introSubheading}
-          paragraph1={Content.paragraph1}
-          paragraph2={Content.paragraph2}
-          paragraph3={Content.paragraph3}
-          paragraph4={Content.paragraph4}
-          paragraph5={Content.paragraph5}
-          paragraph6={Content.paragraph6}
-          heading1={Content.heading1}
-          heading2={Content.heading2}
-          heading3={Content.heading3}
-          heading4={Content.heading4}
-          heading5={Content.heading5}
-          heading6={Content.heading6}
-          nextPageLink={Content.nextPageLink}
-          to={Content.to}
+       {...Content}
         />
       </Grid>
       <Footer />

@@ -31,7 +31,7 @@
 }
 
 .Projects_Image_Text h2{
-font-size: 2rem;
+font-size: clamp(1.5rem,5vw,2rem);
 font-family: 'SpaceGroteskMedium';
 color: var(--secondary-text-color);
 }
@@ -55,4 +55,9 @@ font-size: 2rem;
     font-size: 4rem;
     font-family: 'SpaceGroteskMedium';
     color: var(--secondary-text-color);
+    }
+
+    .portfolio_projects_header{
+        width: 100%;
+        background-color: aqua;
     }

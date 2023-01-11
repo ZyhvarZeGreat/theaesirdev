@@ -42,7 +42,6 @@ const Project_Body = (props) => {
 
   } = projects;
 
-  console.log((Number(id) + 1).toString())
   const theme = useTheme();
   const query = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -222,7 +221,7 @@ const Project_Body = (props) => {
         >
           <p>Next</p>
        
-         <button onClick={()=> navigat}>
+         <button onClick={()=>navigateTo(`/${(Number(id) + 1).toString()}`)}>
          <h1>{nextPageLink}</h1>
          </button>
          

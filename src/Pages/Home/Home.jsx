@@ -8,9 +8,9 @@ import {projectsData }from './Projects_Data'
 
 
 
-const projects = projectsData.map(({img,title,desc,tags,to})=> {
+const projects = projectsData.map((project)=> {
   return (
-    <Home_Projects img={img} title={title} desc={desc} to={to} tags={tags} />
+    <Home_Projects {...project}/>
   )
 })
 const Home = () => {
