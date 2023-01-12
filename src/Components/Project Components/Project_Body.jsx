@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Project_Body.css";
 import { Link, useNavigate, redirect, useParams } from "react-router-dom";
 import { Grid, Stack, useTheme, useMediaQuery } from "@mui/material";
@@ -10,13 +10,13 @@ gsap.registerPlugin(ScrollTrigger, Power2);
 const Project_Body = (props) => {
   const { projectdetails } = useParams();
 
-  const navigateTo = useNavigate()
+  let [projectId, setProjectId] = useState();
 
   const projects = Projects_Data.find(
     (product) => product.id === projectdetails
   );
 
-  console.log(projects)
+  console.log(projects);
 
   const {
     Project_Image_1,
@@ -38,8 +38,7 @@ const Project_Body = (props) => {
     heading5,
     heading6,
     to,
-    nextPageLink
-
+    nextPageLink,
   } = projects;
 
   const theme = useTheme();
@@ -71,39 +70,45 @@ const Project_Body = (props) => {
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    navigate(`${(Number(id) + 1).toString()}`);
-    console.log(to);
+    // const isHigher = id > 5
+    navigate(`/${(Number(id) + 1).toString()}`);
+    // console.log(id)
+    // console.log(isHigher)
   };
-  useEffect(() => {
-    console.log(navigateFunction);
-    tl.from(
-      [header1, header2, header3],
-      {
-        x: -200,
-        opacity: 0,
-        duration: 1,
-        skewX: -1,
-        ease: Power2.easeInOut,
-        delay: 0.3,
-      },
-      0.45
-    ).from(
-      [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5],
 
-      {
-        y: 200,
-        opacity: 0,
-        duration: 2,
-        skewY: -1,
-        ease: Power2.easeInOut,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: ".Projects_Image_Text",
-        },
-      },
-      "+=1"
-    );
-  });
+  //   useEffect(()=>{
+
+  //  },[projectId])
+  // useEffect(() => {
+  //   console.log(navigateFunction);
+  //   tl.from(
+  //     [header1, header2, header3],
+  //     {
+  //       x: -200,
+  //       opacity: 0,
+  //       duration: 1,
+  //       skewX: -1,
+  //       ease: Power2.easeInOut,
+  //       delay: 0.3,
+  //     },
+  //     0.45
+  //   ).from(
+  //     [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5],
+
+  //     {
+  //       y: 200,
+  //       opacity: 0,
+  //       duration: 2,
+  //       skewY: -1,
+  //       ease: Power2.easeInOut,
+  //       delay: 0.3,
+  //       scrollTrigger: {
+  //         trigger: ".Projects_Image_Text",
+  //       },
+  //     },
+  //     "+=1"
+  //   );
+  // });
   return (
     <Grid
       container
@@ -220,12 +225,15 @@ const Project_Body = (props) => {
           justifyContent="center"
         >
           <p>Next</p>
-       
-         <button className='portfolio_project_navigate_btn' onClick={()=>navigateTo(`/${(Number(id) + 1).toString()}`)}>
-         <h1>{nextPageLink}</h1>
-         </button>
-         
-        
+
+          <button
+            className="portfolio_project_navigate_btn"
+            onClick={() => {
+              navigateFunction();
+            }}
+          >
+            <h1>{nextPageLink}</h1>
+          </button>
         </Stack>
       </Grid>
     </Grid>
