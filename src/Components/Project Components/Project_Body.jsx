@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, Power2);
 const Project_Body = (props) => {
   const { projectdetails } = useParams();
 
-  let [projectId, setProjectId] = useState();
+  
 
   const projects = Projects_Data.find(
     (product) => product.id === projectdetails
@@ -70,10 +70,14 @@ const Project_Body = (props) => {
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    // const isHigher = id > 5
-    navigate(`/${(Number(id) + 1).toString()}`);
-    // console.log(id)
-    // console.log(isHigher)
+    const isHigher = projectId > 4
+    // // navigate(`/${(Number(id) + 1).toString()}`);
+    // setProjectId((Number(id) + 1).toString())
+  
+    isHigher ? navigate(`/1`) : navigate(`/${(Number(id) + 1).toString()}`);
+  
+    console.log(projectId)
+    console.log(isHigher)
   };
 
   //   useEffect(()=>{
