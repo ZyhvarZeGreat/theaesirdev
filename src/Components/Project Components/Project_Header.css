@@ -9,7 +9,7 @@
 
 .portolio_project_header_text p {
     font-family: 'GilroyMedium', sans-serif;
-    font-size:clamp(1.35rem,5vw,1.6rem);
+    font-size:clamp(1.3rem,5vw,1.6rem);
     text-align: center;
     color: var(--secondary-text-color);
 }

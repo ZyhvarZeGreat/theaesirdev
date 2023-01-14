@@ -50,7 +50,7 @@ const Home_Hero = (props) => {
   return (
     <Grid
       direction="row"
-      height={query ? "50rem" : "60rem"}
+      height={query ? "50rem" : ""}
       alignItems="center"
       justifyContent="center"
       xs={11.5}

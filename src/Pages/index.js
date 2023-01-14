@@ -1,7 +1,2 @@
 export { default as Home} from './Home/Home'
 export { default as Projects} from './Projects/Projects'
-export { default as Lalasia} from './Projects/Lalasia'
-export { default as Nuegas} from './Projects/Nuegas'
-export { default as Urcrypto} from './Projects/Urcrypto'
-export { default as Techfaze} from './Projects/Techfaze'
-export { default as Morent} from './Projects/Morent'

@@ -4,6 +4,7 @@ import { Navbar,Footer } from '../../Reusables/index'
 import {Grid,Stack} from '@mui/material'
 import { Content} from './Content'
 import {header} from './header'
+import './Projects.css'
 import { useParams } from 'react-router-dom'
 const Projects = () => {
   const {projectdetails} = useParams()
@@ -21,15 +22,14 @@ const Projects = () => {
       maxWidth="1440px"
       className="portolio_projects_container"
     >
-      <Stack width="90%" height="7rem">
-        <Navbar />
+      <Stack  alignItems='center' justifyContent='center'  width="90%">
+      <Project_Header  {...header} />
       </Stack>
-      <Project_Header {...header} />
+
       <Project_Body
      {...Content}
       />
     </Grid>
-    <Footer />
   </div>
   )
 }

@@ -1,12 +1,13 @@
 export const Projects_Data = [
    { 
       id:"1",
+      tags:"urcrypto",
       Title:'Urcrypto',
-      subTitle:'Urcrypto is a comprehensive crypto-wallet and trading application that allows you to securely buy, sell, store, and track your digital assets.',
-      desc:'',
+      subTitle:'Trade Crypto Easily',
+      desc:'Urcrypto is a comprehensive crypto-wallet and trading application that allows you to securely buy, sell, store, and track your digital assets.',
       Project_Image_1: 'urcrypto.jpg' ,
       Project_Image_2: 'Dashboard.jpg' ,
-      Project_Image_3: 'SignIn.png' ,
+      Project_Image_3: 'urcrypto-1.png' ,
       introHeading1:
         "Urcrypto was one of the first projects i built using react.js and was an exploration towards the crypto and web3 aspect of web development.",
       introSubheading:
@@ -25,7 +26,7 @@ export const Projects_Data = [
         "Functional Programming, System Design, Information Architecture,Testing",
       paragraph3text: "ReactJS, Material UI, GSAP,Firebase Vercel",
       paragraph4text:
-        " The Purpose of this Project was to build a functional and aesthetically <br /> pleasing frontend to help users manage their crypto assets",
+        " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
         "I Developed an app that offers Urcrypto's core functionalities to it's users",
       paragraph6text:
@@ -59,7 +60,7 @@ export const Projects_Data = [
         "Functional Programming, System Design, Information Architecture,Testing",
       paragraph3text: "ReactJS, Material UI, GSAP, Redux, Vercel",
       paragraph4text:
-        " The Purpose of this Project was to build a functional and aesthetically <br /> pleasing frontend to help users manage their crypto assets",
+        " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
         "I Pushed a project that sought to explore the realms between creative and functional development",
       paragraph6text:
@@ -93,7 +94,7 @@ export const Projects_Data = [
         "Functional Programming, System Design, Information Architecture,Testing",
       paragraph3text: "ReactJS, Material UI, GSAP,Firebase ,Vercel",
       paragraph4text:
-        " The Purpose of this Project was to build a functional and aesthetically <br /> pleasing frontend to help users manage their crypto assets",
+        " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
         "I Developed an app that offers Urcrypto's core functionalities to it's users",
       paragraph6text:
@@ -127,7 +128,7 @@ export const Projects_Data = [
         "Functional Programming, System Design, Information Architecture,Testing",
       paragraph3text: "ReactJS, Material UI, GSAP,Firebase ,Vercel",
       paragraph4text:
-        " The Purpose of this Project was to build a functional and aesthetically <br /> pleasing frontend to help users manage their crypto assets",
+        " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
         "I Developed an app that offers Urcrypto's core functionalities to it's users",
       paragraph6text:
@@ -161,7 +162,7 @@ export const Projects_Data = [
         "Functional Programming, System Design, Information Architecture,Testing",
       paragraph3text: "ReactJS, Material UI, GSAP,Firebase ,Vercel",
       paragraph4text:
-        " The Purpose of this Project was to build a functional and aesthetically <br /> pleasing frontend to help users manage their crypto assets",
+        " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
         "I implemented a clean and intuitive interface, making it easy for users to add and manage their tasks. The app also includes integrations with popular productivity tools, such as Trello and Google Calendar, allowing users to seamlessly sync their tasks and stay on track.",
       paragraph6text:

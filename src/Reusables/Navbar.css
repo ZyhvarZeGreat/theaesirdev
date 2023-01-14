@@ -20,6 +20,9 @@ height: 4px;
     flex-direction: row;
     gap: 2rem;
 }
+.portfolio_navbar_actions_links a{
+    cursor: pointer;
+}
 
 .portfolio_navbar_home_link:hover,.portfolio_navbar_actions_links a:hover{
     color: var(--secondary-text-color);

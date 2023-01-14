@@ -18,6 +18,7 @@ function fadeIn(el, targetEl) {
     duration: 2,
     delay:.8,
     scrub: true,
+    marker:true,
     stagger: {
       amount: 0.6,
     },

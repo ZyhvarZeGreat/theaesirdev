@@ -6,7 +6,7 @@ const Home_Work_Experience = () => {
     <Grid
       alignSelf="flex-start"
       className="Home_Work_Experience"
-      xs={10}
+      xs={11}
       container
       alignItems="flex-start"
     >

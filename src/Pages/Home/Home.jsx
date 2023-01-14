@@ -50,7 +50,7 @@ let tl = gsap.timeline()
       trigger:(element.querySelector(".portfolio_projects_contents")),
       start:'top top',
       end:'+=500',
-      markers:{startColor:'red', endColor:'blue',fontSize:20,fontWeight:'bold'}
+      // markers:{startColor:'red', endColor:'blue',fontSize:20,fontWeight:'bold'}
     }
   })
 })
@@ -58,17 +58,17 @@ let tl = gsap.timeline()
   return (
  <Grid  container alignItems='center'justifyContent='center' xs={12}>
      <Grid  alignItems='center' justifyContent='center' maxWidth='1440px' gap='5rem'  container xs={11}>
-      <Navbar to={`/`}  />
+     
       <Home_Hero/>
       <Home_Bio/>
       
 
-        <Grid gap='1rem'  xs={11}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
-        <Grid container xs={11}  height='6rem'alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
+        <Grid gap='1rem' xs={12}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
+        <Grid container xs={11.5}  height='6rem'alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
         <h1 className="portfolio_projects_header"> Selected <span> Projects</span></h1>
 
         </Grid>
-  <Grid ref={ref}   container alignItems='center' gap={query ? '7rem':'3rem'} className="portfolio_projects_content">
+  <Grid ref={ref} height='100%' gap={query ? '3rem':'5rem'}  container alignItems='flex-start' justifyContent='flex-start' className="portfolio_projects_content">
   {projects}
   </Grid>
         </Grid>
@@ -82,7 +82,7 @@ let tl = gsap.timeline()
       <Call_to_action/>
      
     </Grid>
-    <Footer />
+
  </Grid>
   );
 };

@@ -6,9 +6,10 @@
   --footer-text-color:#474747;
   --footer-background-color:#191919;
   --footer-input-background-color:#494949;
-  --secondary-text-color:#FF0048;
+  --secondary-text-color:hsl(343, 100%, 50%);
   --navbar-cta-button-color:#404040;
   --h1-font-size: 3.5rem;
+  --CTA-Gradient: linear-gradient()
 }
 
 

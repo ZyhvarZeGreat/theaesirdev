@@ -14,7 +14,7 @@ const Home_Projects = (props) => {
   return (
     <Grid
       xs={12}
-      md={11}
+      md={12}
       alignItems="center"
       justifyContent="center"
       container
@@ -26,13 +26,13 @@ const Home_Projects = (props) => {
         container
         direction="row"
         alignItems="center"
-        gap={query ? "4rem" : "0rem"}
+        gap={query ? "3rem" : "2rem"}
         justifyContent="center"
-        height={query ? "40rem" : "60rem"}
+        height={query ? "35rem" : "45rem"}
         className="portfolio_projects_content"
       >
         <Grid
-          height={query ? "100%" : "40%"}
+          height={query ? "87%" : "50%"}
           container
           alignItems="center"
           justifyContent="center"
@@ -44,7 +44,7 @@ const Home_Projects = (props) => {
         </Grid>
 
         <Grid
-          height={query ? "100%" : "50%"}
+          height={query ? "90%" : "60%"}
           width="100%"
           container
           alignItems="center"
@@ -61,6 +61,7 @@ const Home_Projects = (props) => {
             alignItems="flex-start"
             width={query ? "95%" : "100%"}
             direction="column"
+            gap='1rem'
           >
             <Grid
               container
@@ -68,7 +69,7 @@ const Home_Projects = (props) => {
               gap="2rem"
               className="portfolio_projects_content_text_top"
               direction="column"
-              height="65%"
+              height="70%"
               width="100%"
             >
               <p> {props.title}</p>

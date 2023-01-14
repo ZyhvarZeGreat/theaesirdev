@@ -1,19 +1,22 @@
-import {Home,Projects,Lalasia,Urcrypto,Techfaze,Morent, Nuegas} from './Pages/index'
+import {Home,Projects} from './Pages/index'
 import './App.css'
+import {Navbar,Footer} from './Reusables/index'
 import{Routes,Route} from 'react-router-dom'
 import {Grid,Container} from '@mui/material'
 function App() {
  
   return (
 
- <div className="App">
+ <Grid gap='3rem' container xs={12}  className="App">
+<Navbar/>
 <Routes>
 <Route  path='/' element ={<Home/>}/>
 <Route path = ':projectdetails' element={<Projects/>}/>
 {/* 
  */}
 </Routes>
-    </div>
+<Footer/>
+    </Grid>
   
   )
 }

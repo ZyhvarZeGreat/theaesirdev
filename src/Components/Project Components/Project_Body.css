@@ -1,65 +1,160 @@
-
-
-
-.Projects_Image{
+.Projects_Image {
+    height: 50rem;
     background-image: url(../../assets/urcrypto.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 2px 1px 1px 0.8px rgba(0,0,0,0.05);
+    box-shadow: 2px 1px 1px 0.8px rgba(0, 0, 0, 0.05);
 }
 
-.Projects_Image_2{
+.Projects_Image_2 {
+    height: 50rem;
     background-image: url(../../assets/Dashboard.jpg);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover; 
-    box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.06);
+    background-size: cover;
+    box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.06);
 }
 
-.Projects_Image_3{
+.Projects_Image_3 {
+    height: 50rem;
     background-image: url(../../assets/SignUp.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover; 
-    filter:drop-shadow(0 0 0.75rem rgba(0,0,0,0.4) )
+    background-size: cover;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.4))
 }
-.Projects_Image_Text p{
+
+.Projects_Image_Text p {
     font-family: 'GilroyRegular';
     font-size: 1.3rem;
     line-height: 1.5em;
 }
 
-.Projects_Image_Text h2{
-font-size: clamp(1.5rem,5vw,2rem);
-font-family: 'SpaceGroteskMedium';
-color: var(--secondary-text-color);
+.Projects_Image_Text h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-family: 'SpaceGroteskMedium';
+    color: var(--secondary-text-color);
 }
 
-.Projects_Image_Text_Challenge h2{
+.Projects_Image_Text_Challenge h2 {
     font-size: 2rem;
     font-family: 'SpaceGroteskMedium';
     color: var(--secondary-text-color);
 }
 
-.Projects_Image_Text_Challenge p{
+.Projects_Image_Text_Challenge p {
     font-size: 1.3rem;
-        line-height: 1.5em;
+    line-height: 1.5em;
     font-family: 'GilroyRegular';
 }
-.Project_Body_Navigation p{
-font-size: 2rem;
+
+.Project_Body_Navigation p {
+    font-family: 'GilroyRegular';
+    font-size: 2rem;
 }
 
-.Project_Body_Navigation h1{
+.Project_Body_Navigation h1 {
     font-size: 4rem;
     font-family: 'SpaceGroteskMedium';
     color: var(--secondary-text-color);
+}
+
+
+.portfolio_project_navigate_btn {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.portfolio_project_link {
+    height: 25rem;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top left ,  hsl(343, 100%, 50%), rgba(255, 7, 7, 0.616));;
+    
+}
+
+.portfolio_project_link_overlay {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio_project_link_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio_project_link_h1 {
+    font-family: 'SpaceGroteskBold', Arial, Helvetica, sans-serif;
+    font-size: clamp(1.2rem, 8vw, var(--h1-font-size));
+    color: white;
+}
+
+.portfolio_project_link_link {
+   
+    background-color: white;
+    border-radius: 5px;
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.portfolio_project_link_link p{
+    font-size: clamp(.8rem,4vw,1.2rem);
+    font-family: 'SpaceMonoBold';
+    color: var(--secondary-text-color);
+    
+}
+
+@media screen and (max-width:1024px) {
+
+    .Projects_Image,
+    .Projects_Image_2,
+    .Projects_Image_3 {
+        height: 30rem;        
     }
 
-   
-    .portfolio_project_navigate_btn{
-        background-color:transparent;
-        border: none;
-        margin-bottom: 3rem;
+    .portfolio_project_link {
+        height: 20rem;
     }
+}
+
+@media screen and (max-width:767px) {
+
+    .Projects_Image,
+    .Projects_Image_2,
+    .Projects_Image_3 {
+        height: 25rem;
+    }
+
+    .portfolio_project_link {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .Projects_Image,
+    .Projects_Image_2,
+    .Projects_Image_3 {
+        height: 16rem;
+    }
+
+    .portfolio_project_link {
+        height: 14rem;
+    }
+    .portfolio_project_link_link {
+        height: 3rem;
+        width:9rem;
+    }
+}
