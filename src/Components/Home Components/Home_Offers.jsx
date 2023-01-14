@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import 'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'
 import { Power3, ScrollTrigger } from "gsap/src/all";
 import { gsap } from "gsap";
 import fadeIn from "../../Animations/fadein";
