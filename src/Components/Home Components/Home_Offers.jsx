@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import circle from "../../assets/circle.svg";
-import redcircle from "../../assets/red-circle.svg";
+import 'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'
 import { Power3, ScrollTrigger } from "gsap/src/all";
 import { gsap } from "gsap";
 import fadeIn from "../../Animations/fadein";
@@ -97,7 +96,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} /> <h3 ref={targetRef}> Ideation</h3>
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} /> <h3 ref={targetRef}> Ideation</h3>
             </motion.div>
           </Stack>
 
@@ -125,7 +124,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} /> <h3 ref={targetRef}>Web Development</h3>
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} /> <h3 ref={targetRef}>Web Development</h3>
             </motion.div>
           </Stack>
 
@@ -153,7 +152,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} />{" "}
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} />{" "}
               <h3 ref={targetRef}> Application Development </h3>
             </motion.div>
           </Stack>
@@ -182,7 +181,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} /> <h3 ref={targetRef}> Consultations</h3>
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} /> <h3 ref={targetRef}> Consultations</h3>
             </motion.div>
           </Stack>
 
@@ -210,7 +209,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={redcircle} />
+              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'.svg"} />
               <h3 id="red" ref={targetRef}>
                 SEO
               </h3>
@@ -253,7 +252,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} /> <h3 ref={targetRef}> Web Apps</h3>
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} /> <h3 ref={targetRef}> Web Apps</h3>
             </motion.div>
           </Stack>
           <Stack
@@ -280,7 +279,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} /> <h3 ref={targetRef}>Mobile Apps</h3>
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} /> <h3 ref={targetRef}>Mobile Apps</h3>
             </motion.div>
           </Stack>
           <Stack
@@ -307,7 +306,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={circle} />
+              <img src={'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'} />
               <h3 ref={targetRef}> Web Sites </h3>
             </motion.div>
           </Stack>
@@ -335,7 +334,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={redcircle} />
+              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'.svg"} />
               <h3 ref={targetRef}> Various Digital Products</h3>
             </motion.div>
           </Stack>
