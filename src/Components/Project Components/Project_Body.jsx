@@ -4,7 +4,6 @@ import { Link, useNavigate, redirect, useParams } from "react-router-dom";
 import { Grid, Stack, useTheme, useMediaQuery } from "@mui/material";
 import { Projects_Data } from "./Projects_Data";
 import { gsap, ScrollTrigger, Power2 } from "gsap/all";
-import img from "../../assets/3dpattern.jpg";
 gsap.registerPlugin(ScrollTrigger, Power2);
 
 const Project_Body = (props) => {
