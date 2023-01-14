@@ -244,7 +244,7 @@ const Project_Body = (props) => {
       >
         <h1 className="portfolio_project_link_h1">Check Out My Work</h1>
 
-        <Link className="portfolio_project_link_link" to="/">
+        <Link className="portfolio_project_link_link" to={to}>
           <p>Go to Project</p>
         </Link>
 

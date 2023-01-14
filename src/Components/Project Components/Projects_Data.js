@@ -5,9 +5,9 @@ export const Projects_Data = [
       Title:'Urcrypto',
       subTitle:'Trade Crypto Easily',
       desc:'Urcrypto is a comprehensive crypto-wallet and trading application that allows you to securely buy, sell, store, and track your digital assets.',
-      Project_Image_1: 'urcrypto.jpg' ,
-      Project_Image_2: 'Dashboard.jpg' ,
-      Project_Image_3: 'urcrypto-1.png' ,
+      Project_Image_1: 'https://tabodozo.sirv.com/Portfolio%20Assets/urcrypto.jpg' ,
+      Project_Image_2: 'https://tabodozo.sirv.com/Portfolio%20Assets/Dashboard.jpg' ,
+      Project_Image_3: 'https://tabodozo.sirv.com/Portfolio%20Assets/SignIn.png' ,
       introHeading1:
         "Urcrypto was one of the first projects i built using react.js and was an exploration towards the crypto and web3 aspect of web development.",
       introSubheading:
@@ -32,16 +32,16 @@ export const Projects_Data = [
       paragraph6text:
         "Based on my research, I knew the target groups I was catering to,and That lead me to keep the signup process simple and fast so that they can get started quickly.",
       nextPageLink: " Lalasia",
-      to: '/Lalasia'
+      to: 'https://dev-portfolio-pi.vercel.app/'
     },
     {    
       id:"2",
       Title:'Lalasia',
       subTitle:'An e-commerce/landing page for high end furniture purchase',
       desc:"Find your perfect furniture with Lalasi! Browse a wide selection of high-quality furniture and home decor in one convenient app. ",
-      Project_Image_1: 'lalasia.png',
-      Project_Image_2: 'Details.png',
-      Project_Image_3: 'Services.png',
+      Project_Image_1: 'https://tabodozo.sirv.com/Portfolio%20Assets/lalasia.png',
+      Project_Image_2: 'https://tabodozo.sirv.com/Portfolio%20Assets/Details.png',
+      Project_Image_3: 'https://tabodozo.sirv.com/Portfolio%20Assets/Services.png',
       introHeading1:
         "I intended Lalasia to be a crossover between creative development and ecommerce since the two facets never seemed to blend well ",
       introSubheading:
@@ -58,7 +58,7 @@ export const Projects_Data = [
         "My responsibilities included defining the scope, managing the project,Introducing the animations, Integrating the firebase backend,and deploying the finished application to Vercel",
       paragraph2text:
         "Functional Programming, System Design, Information Architecture,Testing",
-      paragraph3text: "ReactJS, Material UI, GSAP, Redux, Vercel",
+      paragraph3text: "ReactJS, Material UI, GSAP, Vercel",
       paragraph4text:
         " The Purpose of this Project was to build a functional and aesthetically  pleasing frontend to help users manage their crypto assets",
       paragraph5text:
@@ -66,16 +66,16 @@ export const Projects_Data = [
       paragraph6text:
         "Based on my research, I knew the target groups I was catering to,and That lead me to keep the signup process simple and fast so that they can get started quickly.",
       nextPageLink: "Morent",
-      to:'/Morent'
+      to:'https://wext-lake.vercel.app/'
     },
     { 
       id:"3",
       Title:'Morent',
       subTitle:'A Car Rental Servicing Application',
       desc:"Morent is the perfect car rental app for all your travel needs. With a wide selection of cars to choose from, competitive prices, and the ability to book and pay through the app, Morent makes car rental a breeze.",
-      Project_Image_1: 'morent.png',
-      Project_Image_2: 'Admin_Dashboard.png',
-      Project_Image_3: 'Car_Details.png',
+      Project_Image_1: 'https://tabodozo.sirv.com/Portfolio%20Assets/Morent.png',
+      Project_Image_2: 'https://tabodozo.sirv.com/Portfolio%20Assets/Admin_Dashboard.png',
+      Project_Image_3: 'https://tabodozo.sirv.com/Portfolio%20Assets/Car_Details.png',
       introHeading1:
         "Urcrypto was one of the first projects i built using react.js and was an exploration towards the crypto and web3 aspect of web development.",
       introSubheading:
@@ -107,9 +107,9 @@ export const Projects_Data = [
       Title:'Techfaze',
       subTitle:'E-commerce Platform for high grade electronics and gadgets',
       desc:"Techfaze is your one-stop shop for all the latest and greatest electronics and gadgets. Our vast selection of products, from smartphones and laptops to smart home devices and gaming consoles, is sure to have something for everyone.", 
-      Project_Image_1: 'morent.png',
-      Project_Image_2: 'Admin_Dashboard.png',
-      Project_Image_3: 'Car_Details.png',
+      Project_Image_1: 'https://tabodozo.sirv.com/Portfolio%20Assets/techfaze.png',
+      Project_Image_2: 'https://tabodozo.sirv.com/Portfolio%20Assets/Catalog.png',
+      Project_Image_3: 'https://tabodozo.sirv.com/Portfolio%20Assets/Checkout.png',
       introHeading1:
         "Urcrypto was one of the first projects i built using react.js and was an exploration towards the crypto and web3 aspect of web development.",
       introSubheading:
@@ -141,9 +141,9 @@ export const Projects_Data = [
       Title:'Nuegas',
       desc:'Stay organized and productive with Nuegas, the ultimate task management app. Easily create and manage to-do lists, set reminders, and track your progress.',
       subTitle:'A Task Management SAAS',
-      Project_Image_1: "NuegasCover.png",
-      Project_Image_2: "NuegasDashboard.png",
-      Project_Image_3: "NuegasDetails.png",
+      Project_Image_1: "https://tabodozo.sirv.com/Portfolio%20Assets/NuegasCover.png",
+      Project_Image_2: "https://tabodozo.sirv.com/Portfolio%20Assets/NuegasDashboard.png",
+      Project_Image_3: "https://tabodozo.sirv.com/Portfolio%20Assets/NuegasDetails.png",
       introHeading1:
         "With Task Hub, users can create tasks, assign them to team members, and set deadlines. The app also includes features such as categorization, prioritization, and task dependencies to help users stay focused and manage their workload effectively.",
       introSubheading:
