@@ -122,7 +122,7 @@ const Project_Body = (props) => {
       <Grid
         borderRadius={query ? "1rem" : ""}
         className="Projects_Image"
-        style={{ backgroundImage: `url('../${Project_Image_1}')` }}
+        style={{ backgroundImage: `url('${Project_Image_1}')` }}
         container
         md={11}
         xs={11.8}
@@ -186,7 +186,7 @@ const Project_Body = (props) => {
       <Grid
         borderRadius={query ? "1rem" : ""}
         className="Projects_Image_2"
-        style={{ backgroundImage: `url('../${Project_Image_2}')` }}
+        style={{ backgroundImage: `url('${Project_Image_2}')` }}
         container
         md={11}
         xs={11.8}
@@ -232,7 +232,7 @@ const Project_Body = (props) => {
         container
         md={11}
         xs={11.8}
-        style={{ backgroundImage: `url('../${Project_Image_3}')` }}
+        style={{ backgroundImage: `url('${Project_Image_3}')` }}
       ></Grid>
 
       <Grid
