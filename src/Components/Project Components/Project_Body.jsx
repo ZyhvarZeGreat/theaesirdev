@@ -77,6 +77,7 @@ const Project_Body = (props) => {
     // console.log(isHigher)
   };
 
+
   //   useEffect(()=>{
 
   //  },[projectId])
@@ -139,25 +140,44 @@ const Project_Body = (props) => {
         textAlign={query ? "start" : "center"}
       >
         <Stack
-          className="portfolio_projects_header"
-          gap={"2rem"}
-          width={query ? "70%" : "100%"}
+          alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}
         >
           <p ref={(el) => (paragraph1 = el)}>{introHeading1}</p>
           <p ref={(el) => (paragraph2 = el)}>{introsubHeading}</p>
         </Stack>
 
-        <Stack width={query ? "70%" : "100%"} gap={"1rem"}>
+        <Stack
+          alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}>
           <h2 ref={(el) => (header1 = el)}> {heading1} </h2>
           <p ref={(el) => (paragraph3 = el)}>{paragraph1text}</p>
         </Stack>
 
-        <Stack width={query ? "70%" : "100%"} gap={"1rem"}>
+        <Stack alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}>
           <h2 ref={(el) => (header2 = el)}>{heading2} </h2>
           <p ref={(el) => (paragraph4 = el)}>{paragraph2text}</p>
         </Stack>
 
-        <Stack width={query ? "70%" : "100%"} gap={"1rem"}>
+        <Stack alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}>
           <h2 ref={(el) => (header3 = el)}> {heading3}</h2>
 
           <p ref={(el) => (paragraph5 = el)}>{paragraph3text}</p>
@@ -182,20 +202,24 @@ const Project_Body = (props) => {
         className="Projects_Image_Text_Challenge"
       >
         <Stack
-          alignItems={query ? "flex-start" : "center"}
-          textAlign={query ? "start" : "center"}
-          width={query ? "70%" : "100%"}
-          gap={"2rem"}
+          alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}
         >
           <h2> {heading4} </h2>
           <p>{paragraph4text}</p>
         </Stack>
 
         <Stack
-          alignItems={query ? "flex-start" : "center"}
-          textAlign={query ? "start" : "center"}
-          width={query ? "70%" : "100%"}
-          gap={"2rem"}
+          alignItems={'flex-start'}
+          textAlign={'start'}
+          justifyContent={'flex-start'}
+          width={query ? "70%" : "90%"}
+   
+          gap={"1rem"}
         >
           <h2> {heading5} </h2>
           <p>{paragraph5text}</p>
@@ -214,7 +238,7 @@ const Project_Body = (props) => {
       <Grid
         xs={11.5}
         alignSelf="center"
-        height={query ? "20rem" : ""}
+        // height={query ? "20rem" : ""}
         alignItems="center"
         justifyContent="center"
         container
@@ -222,8 +246,9 @@ const Project_Body = (props) => {
       >
         <Stack
           alignItems={query ? "flex-start" : "center"}
-          textAlign={query ? "start" : "center"}
-          width={query ? "70%" : "100%"}
+          textAlign={'start'}
+          width={query ? "70%" : "90%"}
+   
           gap={"1rem"}
         >
           <h2>{heading6} </h2>
@@ -243,9 +268,9 @@ const Project_Body = (props) => {
       >
         <h1 className="portfolio_project_link_h1">Check Out My Work</h1>
 
-        <Link className="portfolio_project_link_link" to={to}>
+        <a className="portfolio_project_link_link" href={`${to}`}>
           <p>Go to Project</p>
-        </Link>
+        </a>
 
         <Stack className="portfolio_project_link_overlay"></Stack>
       </Stack>

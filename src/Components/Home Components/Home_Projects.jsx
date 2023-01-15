@@ -13,12 +13,12 @@ const Home_Projects = (props) => {
 
   return (
     <Grid
-      xs={12}
+      xs={11}
       md={12}
       alignItems="center"
       justifyContent="center"
       container
-      gap="3rem"
+      gap="2rem"
       className="portfolio_projects_container"
     >
       <Grid
@@ -26,13 +26,13 @@ const Home_Projects = (props) => {
         container
         direction="row"
         alignItems="center"
-        gap={query ? "3rem" : "2rem"}
+        gap={query ? "3rem" : "1rem"}
         justifyContent="center"
-        height={query ? "35rem" : "45rem"}
+        height={query ? "35rem" : ""}
         className="portfolio_projects_content"
       >
         <Grid
-          height={query ? "87%" : "50%"}
+          height={query ? "87%" : "18rem"}
           container
           alignItems="center"
           justifyContent="center"
@@ -44,13 +44,13 @@ const Home_Projects = (props) => {
         </Grid>
 
         <Grid
-          height={query ? "90%" : "60%"}
+          height={query ? "80%" : "22rem"}
           width="100%"
           container
-          alignItems="center"
+          alignItems="flex-end"
           direction="column"
           textAlign="start"
-          justifyContent={query ? "flex-end" : "flex-start"}
+          justifyContent={query ? "flex-end" : "center"}
           xs={12}
           md={5}
           className="portfolio_projects_content_text"
@@ -58,19 +58,22 @@ const Home_Projects = (props) => {
           <Stack
             alignSelf="flex-end"
             height={query ? "100%" : "70%"}
-            alignItems="flex-start"
+            alignItems="flex-end"
             width={query ? "95%" : "100%"}
+            justifyContent='flex-end'
             direction="column"
+            className='portfolio_projects_content_text_container'
             gap='1rem'
           >
             <Grid
               container
               alignItems="flex-start"
               gap="2rem"
+              justifyContent='flex-end'
               className="portfolio_projects_content_text_top"
               direction="column"
-              height="70%"
               width="100%"
+              height='80%'
             >
               <p> {props.title}</p>
               <h1>{props.desc}</h1>
@@ -78,12 +81,13 @@ const Home_Projects = (props) => {
 
             <Grid
               container
-              height="35%"
+              height={query ? "20%":'10rem'}
               className="portfolio_projects_content_text_bottom"
               width="100%"
               direction="column"
-              justifyContent="flex-start"
+              justifyContent={query ? "flex-end":'flex-start'}
               gap="1.4rem"
+            
             >
               <p>{props.tags} </p>
 

@@ -23,37 +23,37 @@ let tl = gsap.timeline()
 
 
 
- useEffect(() => {
-  // tl.from( ref,
-  //   {
-  //   y:300,
-  //   skewY:1.1,
-  //   opacity:0,
-  //   ease:Power3.easeOut,
-  //   duration:3,
-  //   scrub:true,
-  //   stagger:{
-  //       amount:.6
-  //   },
+//  useEffect(() => {
+//   // tl.from( ref,
+//   //   {
+//   //   y:300,
+//   //   skewY:1.1,
+//   //   opacity:0,
+//   //   ease:Power3.easeOut,
+//   //   duration:3,
+//   //   scrub:true,
+//   //   stagger:{
+//   //       amount:.6
+//   //   },
 
-  // })
+//   // })
 
-  let element = ref.current
-  tl.from(element.querySelector(".portfolio_projects_container"),{
-      y:200,
-      opacity:0,
-      duration:1,
-      ease:'elastic',
-      delay:.3,    
+//   let element = ref.current
+//   tl.from(element.querySelector(".portfolio_projects_container"),{
+//       y:200,
+//       opacity:0,
+//       duration:1,
+//       ease:'elastic',
+//       delay:.3,    
 
-    scrollTrigger:{
-      trigger:(element.querySelector(".portfolio_projects_contents")),
-      start:'top top',
-      end:'+=500',
-      // markers:{startColor:'red', endColor:'blue',fontSize:20,fontWeight:'bold'}
-    }
-  })
-})
+//     scrollTrigger:{
+//       trigger:(element.querySelector(".portfolio_projects_contents")),
+//       start:'top top',
+//       end:'+=500',
+//       // markers:{startColor:'red', endColor:'blue',fontSize:20,fontWeight:'bold'}
+//     }
+//   })
+// })
 
   return (
  <Grid  container alignItems='center'justifyContent='center' xs={12}>
@@ -63,12 +63,12 @@ let tl = gsap.timeline()
       <Home_Bio/>
       
 
-        <Grid gap='1rem' xs={12}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
-        <Grid container xs={11.5}  height='6rem'alignItems='center' justifyContent='flex-start' className = "portfolio_projects_header">
-        <h1 className="portfolio_projects_header"> Selected <span> Projects</span></h1>
+        <Grid gap='2rem' xs={12}  container alignItems='center' justifyContent='center' className='portfolio_projects' >
+        <Grid container xs={11.5}  height='12rem'alignItems='center' justifyContent={'center'} className = "portfolio_projects_header">
+        <h1 style={{fontSize:'clamp(2rem,4vw,5rem)'}} className="portfolio_projects_header"> Selected <span> Projects</span></h1>
 
         </Grid>
-  <Grid ref={ref} height='100%' gap={query ? '3rem':'5rem'}  container alignItems='flex-start' justifyContent='flex-start' className="portfolio_projects_content">
+  <Grid  height='100%' gap={query ? '3rem':'5rem'}  container alignItems='center' justifyContent='center' className="portfolio_projects_content">
   {projects}
   </Grid>
         </Grid>

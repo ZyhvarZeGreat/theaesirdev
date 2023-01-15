@@ -9,13 +9,13 @@ const Call_to_action = () => {
     query ? param1:param2
   }
 
-  useEffect(() => {
-    fadeIn('.call_to_action','.all_to_action h1')
-  })
+  // useEffect(() => {
+  //   fadeIn('.call_to_action','.call_to_action h1')
+  // })
   return (
 
    
-    <Grid height='25rem' container xs={10.5} md={11} alignItems="center" justifyContent="flex-start" className="call_to_action">
+    <Grid  height='25rem' container xs={10.5} md={11.5} alignItems="center" justifyContent="flex-start" className="call_to_action">
       <h1>
         Based in Lagos,Nigeria. <br />
         <span className="call_to_action_span"> Working with clients from all over the world</span>
