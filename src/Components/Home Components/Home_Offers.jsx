@@ -208,7 +208,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'.svg"} />
+              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-circle.svg"} />
               <h3 id="red" ref={targetRef}>
                 SEO
               </h3>
@@ -333,7 +333,7 @@ const Home_Offers = () => {
                 justifyContent: "center",
               }}
             >
-              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-'https://tabodozo.sirv.com/Portfolio%20Assets/circle.svg'.svg"} />
+              <img src={"https://tabodozo.sirv.com/Portfolio%20Assets/red-circle.svg"} />
               <h3 ref={targetRef}> Various Digital Products</h3>
             </motion.div>
           </Stack>
