@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import "./Home_Bio.css";
-import bio_image from "../../assets/main_bio.jpg";
 import { ScrollTrigger } from "gsap/src/all";
 import scrollElement from "../../Animations/scrollElement";
 import { gsap, TweenMax, TimelineLite, Power2 } from "gsap/gsap-core";
@@ -108,7 +107,7 @@ const Home_Bio = () => {
         md={6}
         ref={(el) => (container = el)}
       >
-        <img ref={(el) => (image = el)} src={bio_image} alt="bio image" />
+        <img ref={(el) => (image = el)} src={"https://tabodozo.sirv.com/Portfolio%20Assets/main_bio.jpg"} alt="bio image" />
       </Grid>
     </Grid>
   );
