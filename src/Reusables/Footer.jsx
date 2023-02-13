@@ -40,7 +40,7 @@ const Footer = () => {
 <a href='https://github.com/ZyhvarZeGreat'> <h1>Github</h1></a>
   <a href='https://linkedin.com/in/danielbolude'> <h1>LinkedIn</h1></a>
   <a href='https://twitter.com/zyhvar_ze_great'> <h1>Twitter</h1></a>
-  <a href='https://twitter.com/theaesir.dev'> <h1>Instagram</h1></a>
+  <a href='https://instagram.com/theaesir.dev'> <h1>Instagram</h1></a>
 </Stack>
       </Grid>
     </Grid>
