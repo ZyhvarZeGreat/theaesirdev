@@ -4,10 +4,11 @@ import circle from "../assets/circle.svg";
 import {Grid,Stack,useTheme,useMediaQuery} from '@mui/material'
 import {Link as NavLink} from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
+import {useNavigate} from 'react-router-dom'
 import {Home_Hero,Home_Projects} from '../Components/index'
 // import { Link } from 'react-router-dom'
 const Navbar = (props) => {
-
+  const navigate = useNavigate()
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.up('md'))
   function mobileQuery(param1,param2){
@@ -33,9 +34,9 @@ const Navbar = (props) => {
   </Link>
 </div>
 
-<button className='portfolio_navbar_actions_button'>
- Hit Me Up
-</button>
+<a href='https://wa.me/+2349159165954?text=Hello%20there' className='portfolio_navbar_actions_button'>
+<p> Hit Me Up</p>
+</a>
 </Grid>
 
     </Grid>
