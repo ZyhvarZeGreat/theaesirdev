@@ -107,7 +107,7 @@ const Home_Bio = () => {
         md={6}
         ref={(el) => (container = el)}
       >
-        <img ref={(el) => (image = el)} src={"https://tabodozo.sirv.com/Portfolio%20Assets/main_bio.jpg"} alt="bio image" />
+        <img ref={(el) => (image = el)} src={"https://tabodozo.sirv.com/Portfolio%20Assets/bio2.jpg"} alt="bio image" />
       </Grid>
     </Grid>
   );

@@ -25,11 +25,11 @@ const Navbar = (props) => {
 
 <Grid xs={12} sm={6}   direction='row' gap={query ? '4rem':'2rem'} alignItems='center'  justifyContent={query ? 'flex-end': 'center'}  container  className='portfolio_navbar_actions'>
 <div className='portfolio_navbar_actions_links'>
-  <Link spy={true} smooth={true}easing={'easeInOutCubic'} delay={100} duration={500} to ={'Work'}>
+  <Link spy={true} smooth={true}easing={'easeInOutQuad'} delay={100} duration={500} to ={'Work'}>
     Work
   </Link>
 
-  <Link spy={true} smooth={true} easing={'easeInOutCubic'} delay={100} duration={500} to ={'About'}>
+  <Link spy={true} smooth={true} easing={'easeInOutQuad'} delay={100} duration={500} to ={'About'}>
     About
   </Link>
 </div>
