@@ -20,6 +20,7 @@ const Home_Projects = (props) => {
       container
       gap="2rem"
       className="portfolio_projects_container"
+      id='Work'
     >
       <Grid
         xs={12}

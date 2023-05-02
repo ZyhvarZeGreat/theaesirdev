@@ -54,7 +54,7 @@ const Home_Bio = () => {
     query ? param1 : param2;
   }
   return (
-    <Grid container xs={11.5} className="portfolio_bio">
+    <Grid container xs={11.5} className="portfolio_bio" id='About'>
       <Grid
         item
         className="portfolio_bio_writeup"
@@ -107,7 +107,7 @@ const Home_Bio = () => {
         md={6}
         ref={(el) => (container = el)}
       >
-        <img ref={(el) => (image = el)} src={"https://tabodozo.sirv.com/Portfolio%20Assets/main_bio.jpg"} alt="bio image" />
+        <img ref={(el) => (image = el)} src={"https://tabodozo.sirv.com/Portfolio%20Assets/bio2.jpg"} alt="bio image" />
       </Grid>
     </Grid>
   );
