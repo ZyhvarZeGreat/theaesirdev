@@ -1,6 +1,6 @@
 import {Home,Projects} from './Pages/index'
 import './App.css'
-import {Navbar,Footer} from './Reusables/index'
+import {Navbar,Footer,ScrollToTop} from './Reusables/index'
 import{Routes,Route} from 'react-router-dom'
 import {Grid,Container} from '@mui/material'
 function App() {
@@ -8,6 +8,7 @@ function App() {
   return (
 
  <Grid gap='3rem' container xs={12}  className="App">
+<ScrollToTop/>
 <Navbar/>
 <Routes>
 <Route  path='/' element ={<Home/>}/>

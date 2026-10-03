@@ -1,44 +1,50 @@
 export const projectsData = [
     {
       id:"1",
-      img:'urcrypto.jpg',
-      title: 'Urcrypto',
-      desc:' A Landing page and dashboard geared towards crypto transactions',
-      tags:'Web App,Finance',
-      to:'urcrypto'
+      img:'rayden-hero.png',
+      title: 'Rayden-UI',
+      desc:'Free, open-source React components — TypeScript, Tailwind tokens, starters & AI companion',
+      tags:'Design System,Open Source',
+      to:'rayden-ui'
     },
     {
       id:"2",
-      img:'lalasia.png',
-      title: 'Lalasia',
-      desc:' An e-commerce/landing page for high end furniture purchase',
-      tags:'Web App,E-commerce',
-      to:'lalasia'
+      img:'zenpay-hero.png',
+      title: 'Zenpay',
+      desc:'Modern payroll management built on blockchain — instant global payments',
+      tags:'Web App,Fintech',
+      to:'zenpay'
     },
     {
       id:"3",
-      img:'pic.png',
-      title: 'Morent',
-      desc:' A Car Rental Servicing Application',
-      tags:'Web App,Rental Servicing',
-      to:'appointly'
+      img:'rinku-hero.png',
+      title: 'Rinku',
+      desc:'Non-custodial crypto trading platform — spot trading, portfolio & on-chain analytics',
+      tags:'Web App,Trading',
+      to:'rinku'
     },
     {
       id:"4",
-      img:'techfaze.png',
-      title: 'Techfaze',
-      desc:'E-commerce Platform for high grade electronics and gadgets',
-      tags:'Web App,E-commerce',
-      to:'techfaze'
+      img:'bastion-hero.png',
+      title: 'Bastion',
+      desc:'Tokenized warehouse receipts — blockchain-verified commodity finance',
+      tags:'Blockchain,AgriTech',
+      to:'bastion'
     },
-  
     {
       id:"5",
-      img:'NuegasCover.png',
-      title: 'Nuegas',
-      desc:'A Task Management SAAS',
-      tags:'Web App,Productivity',
-      to:'nuegas',
+      img:'asma-hero-1.png',
+      title: 'Asma',
+      desc:'ASMA Creativo — building global brands from Africa',
+      tags:'Branding,Marketing',
+      to:'asma'
     },
-    
+    {
+      id:"6",
+      img:'walhost-hero.png',
+      title: 'Walhost',
+      desc:'Decentralized hosting on Walrus — deploy in under a second',
+      tags:'Web3,Hosting',
+      to:'walhost'
+    },
   ]

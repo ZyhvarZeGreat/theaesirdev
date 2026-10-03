@@ -21,7 +21,7 @@ const Project_Body = (props) => {
     Project_Image_3,
     introHeading1,
     id,
-    introsubHeading,
+    introSubheading,
     paragraph1text,
     paragraph2text,
     paragraph3text,
@@ -67,7 +67,7 @@ const Project_Body = (props) => {
   const navigate = useNavigate();
 
   const navigateFunction = () => {
-    const isHigher = id > 4;
+    const isHigher = Number(id) >= Projects_Data.length;
     // // navigate(`/${(Number(id) + 1).toString()}`);
     // setProjectId((Number(id) + 1).toString())
 
@@ -117,7 +117,7 @@ const Project_Body = (props) => {
       alignItems="center"
       justifyContent="center"
       gap="3rem"
-      height="30rem"
+      minHeight="30rem"
     >
       <Grid
         borderRadius={query ? "1rem" : ""}
@@ -130,7 +130,7 @@ const Project_Body = (props) => {
 
       <Grid
         className="Projects_Image_Text"
-        height={query ? "40rem" : ""}
+        minHeight={query ? "40rem" : ""}
         gap={"2rem"}
         justifyContent="center"
         container
@@ -148,7 +148,7 @@ const Project_Body = (props) => {
           gap={"1rem"}
         >
           <p ref={(el) => (paragraph1 = el)}>{introHeading1}</p>
-          <p ref={(el) => (paragraph2 = el)}>{introsubHeading}</p>
+          <p ref={(el) => (paragraph2 = el)}>{introSubheading}</p>
         </Stack>
 
         <Stack
@@ -194,7 +194,7 @@ const Project_Body = (props) => {
       <Grid
         xs={11.5}
         alignSelf="center"
-        height={query ? "25rem" : ""}
+        minHeight={query ? "25rem" : ""}
         alignItems="center"
         gap={"2rem"}
         justifyContent="center"
